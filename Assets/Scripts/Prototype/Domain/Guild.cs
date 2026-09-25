@@ -1,0 +1,33 @@
+using UnityEngine;
+
+namespace GuildProto
+{
+    // 길드 운영 상태: 자금 · 마을 위험도 · 평판
+    public class Guild
+    {
+        public int Funds { get; private set; }
+        public int Danger { get; private set; }
+        public int Reputation { get; private set; }
+
+        public Guild(int funds, int danger, int reputation)
+        {
+            Funds = funds;
+            Danger = danger;
+            Reputation = reputation;
+        }
+
+        public void Earn(int gold) => Funds += gold;
+        public void ChangeDanger(int delta) => Danger = Mathf.Max(0, Danger + delta);
+        public void ChangeReputation(int delta) => Reputation = Mathf.Clamp(Reputation + delta, 0, 100);
+
+        // 밤 결과 화면에서 하루치 정산을 반영
+        public void Settle(Ledger ledger)
+        {
+            foreach (var e in ledger.Entries)
+            {
+                Funds += e.Gold;
+                Reputation = Mathf.Clamp(Reputation + e.Reputation, 0, 100);
+            }
+        }
+    }
+}

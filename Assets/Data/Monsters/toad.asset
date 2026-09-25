@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: toad
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: toad
+  displayName: "\uAC70\uB300 \uB450\uAEBC\uBE44"
+  talkName: "\uAC70\uB300 \uB450\uAEBC\uBE44"
+  features: "\uAC08\uC0C9\uC5D0 \uC6B8\uD241\uBD88\uD241\uD55C \uD53C\uBD80, \uC0AC\uB78C \uD0A4\uB9CC \uD558\uB2E4. '\uC6B0\uC6C5' \uD558\uB294 \uB0AE\uC740 \uC6B8\uC74C. \uAC00\uCD95\uC744 \uD1B5\uC9F8\uB85C \uC0BC\uD0A8\uB2E4. \uB048\uC801\uD55C \uC810\uC561 \uB54C\uBB38\uC5D0 \uCE7C\uB0A0\uC774 \uBBF8\uB044\uB7EC\uC9C4\uB2E4."
+  illustration: {fileID: 6625497298562620416, guid: cc6370c13fc45d74ea0d0d3a39b07721, type: 3}
+  illustrationTint: {r: 0.55, g: 0.42, b: 0.26, a: 1}
+  evidenceName: "\uB450\uAEBC\uBE44 \uB3C5\uC0D8"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.55, g: 0.42, b: 0.26, a: 1}
+  rankByBand: 010000000200000002000000i
+  role: 3
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}

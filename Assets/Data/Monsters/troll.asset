@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: troll
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: troll
+  displayName: "\uD2B8\uB864"
+  talkName: "\uD2B8\uB864"
+  features: "\uB2E4\uB9AC \uBC11\uC774\uB098 \uB3D9\uAD74\uC5D0 \uC0AC\uB294 \uAC70\uC778. \uCF54\uB97C \uCC0C\uB974\uB294 \uC545\uCDE8, \uB358\uC9C4 \uBC14\uC704. \uC0C1\uCC98\uAC00 \uAE08\uC138 \uC544\uBB3C\uC5B4\uC11C \uBD88\uB85C \uC9C0\uC838\uC57C \uD55C\uB2E4."
+  illustration: {fileID: 8539566862590955623, guid: 9b6dd05c5503d344ab4d33d6dd77b854, type: 3}
+  illustrationTint: {r: 0.46, g: 0.56, b: 0.52, a: 1}
+  evidenceName: "\uD2B8\uB864 \uC190\uD1B1"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.46, g: 0.56, b: 0.52, a: 1}
+  rankByBand: 020000000200000002000000i
+  role: 3
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}

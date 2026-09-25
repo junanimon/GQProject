@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GameDatabase
+  m_EditorClassIdentifier: Assembly-CSharp:GuildProto:GameDatabase
+  monsters:
+  - {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}
+  - {fileID: 11400000, guid: 3eb761193cde77f4da8e5d84bb56993e, type: 2}
+  - {fileID: 11400000, guid: b14c26ab083e17643aed91418f1b4d51, type: 2}
+  - {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}
+  - {fileID: 11400000, guid: 74aeae33ce66e3a498e6f80c273eff91, type: 2}
+  - {fileID: 11400000, guid: 13a4eb1787e2f1442a4ab3e03d8f67c7, type: 2}
+  - {fileID: 11400000, guid: 1696f636d6bebd54a9a5d6d2bf723f44, type: 2}
+  - {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}
+  - {fileID: 11400000, guid: 67e9e4a3bc88d5b409f4b34f21dd0c86, type: 2}
+  - {fileID: 11400000, guid: f2ec47cd7faba3a41af5662e671a77b3, type: 2}
+  - {fileID: 11400000, guid: 2c57599265534884b9ff1aaf1fb552ad, type: 2}
+  - {fileID: 11400000, guid: 3f2efb3fc899061489e20b66993e14dd, type: 2}
+  - {fileID: 11400000, guid: 5cf5006e4a98d3f4fb044cfc3a55b375, type: 2}
+  seniorQuests:
+  - {fileID: 11400000, guid: 9c537afce1a750e46b084ece435cf910, type: 2}
+  - {fileID: 11400000, guid: 0f0f2584102b8fc4fbf2045d189b3522, type: 2}
+  nights:
+  - label: "1\uC77C\uCC28 \uBC24"
+    sheets:
+    - {fileID: 11400000, guid: 6f9237110919a4b419f7e8729d566100, type: 2}
+    - {fileID: 11400000, guid: 83942056d1f21d9449ec3ca6c68cab00, type: 2}
+    - {fileID: 11400000, guid: 6c8a414faaea46a40a7353f7eed476dd, type: 2}
+  - label: "2\uC77C\uCC28 \uBC24"
+    sheets:
+    - {fileID: 11400000, guid: 83c065d16705454499b3478dc90a71f7, type: 2}
+    - {fileID: 11400000, guid: 36c45fda606772d4b9957f2d52d4f30e, type: 2}
+    - {fileID: 11400000, guid: 2016e668f32e50f429052cebe6b81f62, type: 2}
+  - label: "3\uC77C\uCC28 \uBC24"
+    sheets:
+    - {fileID: 11400000, guid: 50510dac4a728ad4182aa0d734b3b152, type: 2}
+    - {fileID: 11400000, guid: acd757ff7f7a0384da736b31f9661c10, type: 2}
+    - {fileID: 11400000, guid: acaeed5e3ccf61f4a810f3bda1780f8c, type: 2}
+    - {fileID: 11400000, guid: b3e1a2a4fc657aa449d73dff0ff2a49b, type: 2}
+  - label: "4\uC77C\uCC28 \uBC24"
+    sheets:
+    - {fileID: 11400000, guid: ac11f8e490c3d5543a761a3a6d72cd2e, type: 2}
+    - {fileID: 11400000, guid: c1b14ead8e295a14c9057eb0f92417f6, type: 2}
+    - {fileID: 11400000, guid: 62f8a1ce33700f94badf86be37a14d09, type: 2}
+    - {fileID: 11400000, guid: d572aa6c1858e614d91388a6080b3858, type: 2}
+  - label: "5\uC77C\uCC28 \uBC24"
+    sheets:
+    - {fileID: 11400000, guid: 1c2220b4a34fe6d4c854f77a04a8a927, type: 2}
+    - {fileID: 11400000, guid: 8c26df7136e0e8e40955ad9721abf9df, type: 2}
+    - {fileID: 11400000, guid: c3a3dc7e56bcca44da6e17100eda390d, type: 2}
+    - {fileID: 11400000, guid: d1442d8e3edd88f42a62fbd26ca78b61, type: 2}
+  namedCharacters:
+  - {fileID: 11400000, guid: 09b92be988ed1114c8bd93cadeabab16, type: 2}
+  - {fileID: 11400000, guid: 9d49d19e242d80948877a25ed4ff0772, type: 2}
+  - {fileID: 11400000, guid: 758390f7e3e5e9b4681661f76be737c3, type: 2}
+  - {fileID: 11400000, guid: 854a3d8f0741f1e4b96ccc40840dc311, type: 2}
+  - {fileID: 11400000, guid: 4e3e35ee308ebb44992f976b45920bcd, type: 2}
+  - {fileID: 11400000, guid: de8821b4176ac794bb473daa09bc1a0c, type: 2}
+  looks:
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 1"
+    body: {fileID: 4210602807072109248, guid: 3c67f859ef88aaf40a146ccf627ba362, type: 3}
+    portrait: {fileID: 3015579365552345894, guid: 81af88c8e51b7904fa94482a6a9e7ec1, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 2"
+    body: {fileID: 4461658417742345436, guid: eeafb2279eda9e44eb123a589b040617, type: 3}
+    portrait: {fileID: -7702083934640516139, guid: 5997e98db36459047a191fd4ea913d7c, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 3"
+    body: {fileID: 3588083430038589782, guid: 66c16c31bd90c2c4b993a69f183ab956, type: 3}
+    portrait: {fileID: -9055016729497070098, guid: c844d53b1413f9f449f4e4e8fea0dd4d, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 4"
+    body: {fileID: -1898314312660555170, guid: 3af9dfb4fe8f49d4190dfbc25018f41f, type: 3}
+    portrait: {fileID: 4873423461518087176, guid: 12cc3d68bb6847f4d9487561752a25c4, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 5"
+    body: {fileID: 4619757777796655346, guid: 0339f3ecad1691e4caedb437592f02c7, type: 3}
+    portrait: {fileID: 3937434761614297692, guid: 6b9a50d1b57616b47bedc9bef055f231, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 6"
+    body: {fileID: 9146017248027789769, guid: 2d5259d16b43add42acd655d2b27d2f5, type: 3}
+    portrait: {fileID: 3034284764313650639, guid: 69e029fc01ccbce42856fa4b756a1472, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  - label: "\uC77C\uBC18 \uBAA8\uD5D8\uAC00 7"
+    body: {fileID: 9125983921636137514, guid: ae8d327ef951e854d876d7be4482b7d9, type: 3}
+    portrait: {fileID: 5768733557897866456, guid: 7d1ac73c85c49d1428f787693c1fe3a8, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  namedVisitChance: 0.4
+  seniorName: "\uB9C8\uB974\uD0C0"
+  seniorLook:
+    label: "\uB9C8\uB974\uD0C0"
+    body: {fileID: 4653721254178111242, guid: aaa0c6b6db8bbf344be7a19a29948f4f, type: 3}
+    portrait: {fileID: -904879791615126292, guid: a3ebeec1bcc19b548bb0156f9cb159f4, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  npcLooks:
+  - label: "\uADF8\uB77C\uD568"
+    body: {fileID: 8356359671041212313, guid: e102cd0f402841644bdff140eada4d0e, type: 3}
+    portrait: {fileID: -1003848711095669618, guid: 0624ca2b9f544f74b907726f4ecfbb2e, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+  intro:
+  - speaker: 
+    text: "\uBCC0\uACBD\uC758 \uC791\uC740 \uB9C8\uC744, \uB85C\uC6F0. \uBAA8\uD5D8\uAC00\uB4E4\uC758 \uCCAB \uBC1C\uAC78\uC74C\uC774 \uC2DC\uC791\uB418\uB294 \uACF3."
+  - speaker: 
+    text: "\uC624\uB298\uBD80\uD130 \uB098\uB294 \uC774\uACF3 \uBAA8\uD5D8\uAC00 \uAE38\uB4DC\uC758 \uC2E0\uC785 \uC811\uC218\uC6D0\uC774\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uB124\uAC00 \uC2E0\uC785\uC774\uAD6C\uB098. \uB9C8\uB974\uD0C0\uB2E4. \uC5EC\uAE30 \uC811\uC218 \uB2F4\uB2F9\uC774\uACE0, \uC624\uB298\uBD80\uD130 \uB124 \uC120\uBC30."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC77C\uC740 \uB450 \uAC00\uC9C0\uC57C. \uBC24\uC5D0\uB294 \uC758\uB8B0\uC778\uB4E4\uC774 \uB450\uACE0 \uAC04 \uC758\uB8B0\uC11C\uB97C \uC77D\uACE0 '\uAE38\uB4DC \uAE30\uC785\uB780'\uC744 \uCC44\uC6CC. \uBB34\uC2A8 \uBAAC\uC2A4\uD130\uC778\uC9C0, \uBA87 \uB9C8\uB9AC\uC778\uC9C0. \uB3C4\uAC10 \uBCF4\uACE0 \uB4F1\uAE09\uC774\uB791 \uC5ED\uD560 \uB3C4\uC7A5\uAE4C\uC9C0."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uB0AE\uC5D0\uB294 \uCC3D\uAD6C. \uBAA8\uD5D8\uAC00 \uCE74\uB4DC\uB791 \uC758\uB8B0\uC11C\uB97C \uBCF4\uACE0 \uADDC\uC815\uB300\uB85C \uC2B9\uC778\uD558\uAC70\uB098 \uAC70\uC808\uD574. \uC77C\uC744 \uB9C8\uCE58\uACE0 \uC628 \uB140\uC11D\uB4E4\uC740 \uC99D\uAC70\uBB3C\uC774 \uAC8C\uC2DC\uBCF8\uC774\uB791 \uB9DE\uB294\uC9C0 \uBCF4\uACE0."
+  - speaker: "\uB098"
+    text: "\uAE30\uC900\uC740\u2026 \uC81C\uAC00 \uBC24\uC5D0 \uC4F4 \uAE30\uC785\uB780\uC778\uAC00\uC694?"
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uADF8\uB798. \uBC24\uC5D0 \uB300\uCDA9 \uC4F0\uBA74 \uB0AE\uC5D0 \uC544\uBB34\uB9AC \uC798\uD574\uB3C4 \uC18C\uC6A9\uC5C6\uC5B4. \uC758\uB8B0\uC778 \uB9D0\uC740 \uBC18\uB9CC \uBBFF\uC5B4. \uD638\uB4E4\uAC11 \uB5A0\uB294 \uC0AC\uB78C\uB3C4, '\uBCC4\uC77C \uC544\uB2C8\uC624' \uD558\uB294 \uC0AC\uB78C\uB3C4 \uC788\uC73C\uB2C8\uAE4C."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\u2026\uADF8\uB9AC\uACE0 \uD2C0\uB9AC\uBA74, \uB300\uAC00\uB294 \uB124\uAC00 \uC544\uB2C8\uB77C \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uCE58\uB7EC. \uBA85\uC2EC\uD574."
+  - speaker: 
+    text: "\uC120\uBC30\uB294 \uC11C\uB958 \uBB49\uCE58\uB97C \uB0B4 \uC55E\uC5D0 \uB0B4\uB824\uB193\uACE0, \uC8FC\uBA38\uB2C8\uC5D0\uC11C \uC0AC\uD0D5 \uD558\uB098\uB97C \uAEBC\uB0B4 \uC606\uC5D0 \uB450\uC5C8\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC8FC\uB9D0\uC5D4 \uAF2D \uBB54\uAC00 \uBAB0\uB824\uC640. \uADF8 \uC804\uAE4C\uC9C0 \uB9C8\uC744 \uC704\uD5D8\uB3C4\uB97C \uB0AE\uCDB0 \uB46C. \u2026\uC790, \uCCAB\uB0A0 \uBC24\uC774\uB2E4."
+  raidIntro:
+  - speaker: 
+    text: "\uC8FC\uB9D0 \uBC24. \uBD81\uCABD \uC232\uC5D0\uC11C \uAE38\uAC8C \uC774\uC5B4\uC9C0\uB294 \uC6B8\uC74C\uC18C\uB9AC\uAC00 \uB9C8\uC744\uC744 \uB36E\uC5C8\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC654\uB2E4. \uB291\uB300 \uBB34\uB9AC\uC57C. \uC774\uBC88 \uC8FC\uC5D0 \uB124\uAC00 \uAC78\uB7EC \uB0B8 \uC758\uB8B0\uB4E4\uC774\u2026 \uC9C0\uAE08 \uACB0\uACFC\uB85C \uB3CC\uC544\uC628\uB2E4."
+  - speaker: 
+    text: "\uB9C8\uC744 \uC704\uD5D8\uB3C4\uAC00 \uACE7 \uC2B5\uACA9\uC758 \uADDC\uBAA8\uB2E4. \uC26C\uACE0 \uC788\uB358 \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uBC29\uCC45\uC73C\uB85C \uBAA8\uC5EC\uB4E0\uB2E4."
+  raidPerfect:
+  - speaker: 
+    text: "\uBD81\uBB38\uC5D0 \uBD88\uC774 \uBC1D\uD600\uC9C0\uC790 \uAC00\uC7A5 \uBA3C\uC800 \uB2EC\uB824 \uB098\uC628 \uC774\uB984\uB4E4 \u2014 {defenders}."
+  - speaker: '{hero}'
+    text: "\uC811\uC218\uC6D0! \uC5EC\uAE30\uB294 \uC6B0\uB9AC\uAC00 \uB9E1\uC744\uAC8C. \uC548\uC5D0 \uC788\uC5B4!"
+  - speaker: 
+    text: "\uC0C8\uBCBD\uC774 \uC624\uAE30 \uC804\uC5D0 \uB291\uB300\uB4E4\uC740 \uC232\uC73C\uB85C \uBB3C\uB7EC\uB0AC\uB2E4. \uBD80\uC0C1\uC790 \uC5C6\uC74C."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\u2026\uC798\uD588\uC5B4. \uB124\uAC00 \uBCF4\uB0B8 \uC758\uB8B0\uB4E4\uC774, \uB124\uAC00 \uB9C9\uC544 \uB0B8 \uC0AC\uACE0\uB4E4\uC774 \uC624\uB298 \uB9C8\uC744\uC744 \uC9C0\uCF30\uC5B4."
+  raidClose:
+  - speaker: 
+    text: "\uB3D9\uBB38\uC774 \uB6AB\uB9B4 \uBED4\uD588\uB2E4. \uC9C0\uCE5C \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uBA87 \uBC88\uC774\uACE0 \uB2E4\uC2DC \uC77C\uC5B4\uC130\uB2E4."
+  - speaker: '{hero}'
+    text: "\uD558\uC544, \uD558\uC544\u2026 \uAC04\uC2E0\uD788\u2026 \uB9C9\uC558\uC5B4. \uB2E4\uC74C \uC8FC\uC5D4\u2026 \uC880 \uB354 \uBD80\uD0C1\uD574, \uC811\uC218\uC6D0."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uBC84\uD17C\uB2E4. \uADF8\uAC78\uB85C \uB410\uC5B4. \u2026\uD558\uC9C0\uB9CC \uC704\uD5D8\uB3C4\uAC00 \uC774\uB807\uAC8C \uB192\uC73C\uBA74 \uB2E4\uC74C\uC5D4 \uC7A5\uB2F4 \uBABB \uD574."
+  raidFail:
+  - speaker: 
+    text: "\uBC29\uCC45\uC774 \uBB34\uB108\uC84C\uB2E4. \uBE44\uBA85\uACFC \uB291\uB300 \uC6B8\uC74C\uC774 \uB4A4\uC11E\uC600\uB2E4."
+  - speaker: 
+    text: "\uADF8\uB54C, \uAE38\uB4DC 2\uCE35 \uBB38\uC774 \uC5F4\uB9AC\uACE0 \uC740\uD1F4\uD55C \uAE38\uB4DC\uC7A5\uC774 \uB0A1\uC740 \uB300\uAC80\uC744 \uB4E4\uACE0 \uB0B4\uB824\uC654\uB2E4."
+  - speaker: "\uADF8\uB77C\uD568"
+    text: "\u2026\uC624\uB79C\uB9CC\uC774\uAD70. \uBB3C\uB7EC\uC11C\uB77C, \uC560\uC1A1\uC774\uB4E4."
+  - speaker: 
+    text: "\uB291\uB300\uB4E4\uC740 \uBB3C\uB7EC\uB0AC\uC9C0\uB9CC \uAE38\uB4DC\uB294 \uD070 \uBE5A\uC744 \uC84C\uB2E4. \uADF8\uB77C\uD568\uC740 \uB450 \uBC88 \uB098\uC11C \uC8FC\uC9C0 \uC54A\uC744 \uAC83\uC774\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\u2026\uB2E4\uC74C \uC2B5\uACA9\uC5D0\uC11C \uB610 \uBB34\uB108\uC9C0\uBA74, \uC774 \uB9C8\uC744\uC740 \uB05D\uC774\uC57C."
+  proofIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}

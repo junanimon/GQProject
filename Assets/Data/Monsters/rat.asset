@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: rat
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: rat
+  displayName: "\uAC70\uB300 \uC950"
+  talkName: "\uAC70\uB300 \uC950"
+  features: "\uACE0\uC591\uC774\uB9CC \uD55C \uC950. \uACE1\uBB3C \uCC3D\uACE0\xB7\uD558\uC218\uB3C4\xB7\uC9C0\uD558\uC2E4\uC5D0 \uB5BC\uB85C \uC0B0\uB2E4. \uCC0D\uCC0D\uAC70\uB9AC\uACE0, \uB098\uBB34\uD1B5\uACFC \uC790\uB8E8\uC5D0 \uC774\uBE68 \uC790\uAD6D\uC744 \uB0A8\uAE34\uB2E4."
+  illustration: {fileID: -5237074582503671387, guid: 30e9061326d6f2545b20da5c3e7b1a4e, type: 3}
+  illustrationTint: {r: 0.58, g: 0.52, b: 0.5, a: 1}
+  evidenceName: "\uC950 \uAF2C\uB9AC"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.58, g: 0.52, b: 0.5, a: 1}
+  rankByBand: 000000000000000001000000i
+  role: 0
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: b14c26ab083e17643aed91418f1b4d51, type: 2}

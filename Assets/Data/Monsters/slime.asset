@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: slime
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: slime
+  displayName: "\uC2AC\uB77C\uC784"
+  talkName: "\uC2AC\uB77C\uC784"
+  features: "\uBC18\uD22C\uBA85\uD55C \uC824\uB9AC. \uC18C\uB9AC\uB97C \uC804\uD600 \uB0B4\uC9C0 \uC54A\uB294\uB2E4. \uC881\uC740 \uD2C8\uC73C\uB85C \uC2A4\uBA70\uB4E4\uACE0, \uC9C0\uB098\uAC04 \uC790\uB9AC\uC758 \uBB3C\uAC74\uC774 \uB179\uC544 \uC788\uB2E4. \uBB3C\uB9AC \uACF5\uACA9\uC774 \uC798 \uD1B5\uD558\uC9C0 \uC54A\uB294\uB2E4."
+  illustration: {fileID: 4569161321755363472, guid: 771817a0c32124041ab0c30c861ef3b3, type: 3}
+  illustrationTint: {r: 0.5, g: 0.8, b: 0.84, a: 1}
+  evidenceName: "\uC2AC\uB77C\uC784 \uD575"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.5, g: 0.8, b: 0.84, a: 1}
+  rankByBand: 000000000100000001000000i
+  role: 3
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}
