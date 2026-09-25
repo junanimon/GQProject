@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dfd8e2a9458b4f46b610759492e8b360, type: 3}
   m_Name: "N4_\uB2ED\uC7A5"
   m_EditorClassIdentifier: Assembly-CSharp:GuildProto:QuestData
   title: "\uBC24\uB9C8\uB2E4 \uB2ED\uC7A5\uC774 \uD138\uB9BD\uB2C8\uB2E4"
