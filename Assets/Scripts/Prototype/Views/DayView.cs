@@ -53,7 +53,11 @@ namespace GuildProto
 
         [Header("규정집 (펼친 책)")]
         public Text rulesText;
+        [Tooltip("관할 지역 마크 견본 줄 (규정집)")]
         public GameObject officialSealSample;
+        [Tooltip("지역 마크 견본 칸 (관할 지역 수만큼 켜짐)")]
+        public List<Image> regionMarkSamples = new();
+        public List<Text> regionMarkLabels = new();
 
         [Header("게시판 (팝업)")]
         public RectTransform boardContent;
@@ -68,35 +72,123 @@ namespace GuildProto
         public Text confirmLabel;
         public Button closeDayButton;
         public Text statsText;
+        [Tooltip("완료 승인 + 성공 보너스 (완료 심사 때만 보임)")]
+        public Button bonusButton;
 
-        public void SetRules(IReadOnlyList<IForgery> unlocked, IForgery newest, IReadOnlyList<MonsterData> monsters)
+        [Header("길드 홀 (지명)")]
+        public Button hallButton;
+        public NominationView nomination;
+
+        [Header("수배 주간")]
+        [Tooltip("신고 종 (수배 주간에만 보임)")]
+        public Button reportButton;
+        public GameObject wantedBoardButton;
+        public RectTransform wantedContent;
+        public WantedPosterView posterPrefab;
+
+        [Header("상태 · 연출")]
+        [Tooltip("이름표 아래 한 줄 (증상 · 외부 길드)")]
+        public Text statusText;
+        public RectTransform floatRoot;
+        public FloatingText floatPrefab;
+        public UIShake deskShake;
+        public Text ruleBanner;
+
+        public void SetRules(IReadOnlyList<IForgery> unlocked, IReadOnlyList<Unlock> newToday, ITempRule tempRule,
+            IReadOnlyList<MonsterData> monsters, IReadOnlyList<RegionData> managed)
         {
-            var lines = new List<string>(Regulations.BaseLines);
+            const string New = "  <color=#b02c28><b>[신규]</b></color>";
+            var lines = new List<string>();
+            if (tempRule != null) lines.Add($"<color=#8a2a1a>{tempRule.RuleLine}</color>");
+            lines.AddRange(Regulations.BaseLines);
+            if (managed != null)
+                lines.Add(Regulations.JurisdictionLine + "  (아래 마크 견본)\n  관할: " + string.Join(" · ", managed.Select(r => r.displayName)));
             foreach (var f in unlocked)
-                lines.Add(f.RuleLine + (f == newest ? "  <color=#b02c28><b>[신규]</b></color>" : ""));
+                lines.Add(f.RuleLine + (newToday.Any(u => ForgeryCatalog.For(u) == f) ? New : ""));
             lines.Add(Regulations.CompletionLine);
             string table = "<b>증거 부위표</b>";
             foreach (var m in monsters) if (m.isMonster) table += $"\n  {m.displayName} → {m.evidenceName}";
             lines.Add(table);
             rulesText.text = string.Join("\n\n", lines);
-            officialSealSample.SetActive(unlocked.Any(f => f is SealForgery));
+            officialSealSample.SetActive(managed != null && managed.Count > 0);
+            for (int i = 0; i < regionMarkSamples.Count; i++)
+            {
+                bool on = managed != null && i < managed.Count;
+                regionMarkSamples[i].transform.parent.gameObject.SetActive(on);
+                if (!on) continue;
+                if (managed[i].mark != null) regionMarkSamples[i].sprite = managed[i].mark;
+                regionMarkSamples[i].color = managed[i].markTint;
+                regionMarkLabels[i].text = managed[i].displayName;
+            }
+
+            bool wanted = tempRule is WantedRule;
+            reportButton.gameObject.SetActive(wanted);
+            wantedBoardButton.SetActive(wanted);
+            ruleBanner.transform.parent.gameObject.SetActive(tempRule != null);
+            if (tempRule != null) ruleBanner.text = tempRule.Name;
+            if (!wanted) return;
+            for (int i = wantedContent.childCount - 1; i >= 0; i--) Destroy(wantedContent.GetChild(i).gameObject);
+            foreach (var p in ((WantedRule)tempRule).Posters) Instantiate(posterPrefab, wantedContent).Bind(p);
         }
 
         public void ShowVisitor(GuildCard leader, string line, string visitType)
         {
             var person = leader.Holder;
-            character.Show(person.Look);
+            character.Show(person.Look, person.IsSick);
             characterName.text = leader.Name;
-            epithetText.text = person.IsNamed ? $"「{person.Epithet}」" : $"{Txt.R(person.Rank)}급 {Txt.J(person.Job)}";
+            epithetText.text = person.IsNamed ? $"「{person.Epithet}」" : $"{Txt.R(leader.ShownRank)}급 {Txt.J(person.Job)}";
             hearts.Set(person.Affinity);
             visitTypeText.text = visitType;
+            var status = new List<string>();
+            if (person.IsSick) status.Add("콜록, 콜록… 안색이 창백하다");
+            if (person.IsGuest && person.Criminal == null) status.Add($"'{person.RegionName}'에서 왔다고 한다");
+            statusText.text = string.Join(" · ", status);
+            Say(person.IsSick ? "(콜록) " + line : line);
+        }
+
+        // 모험가가 아닌 사람 (긴급 의뢰 전령 등)
+        public void ShowMessenger(string name, CharacterLook look, string line, string visitType)
+        {
+            character.Show(look);
+            characterName.text = name;
+            epithetText.text = "";
+            hearts.Set(0);
+            visitTypeText.text = visitType;
+            statusText.text = "";
             Say(line);
+        }
+
+        public void Alarm()
+        {
+            deskShake.Shake(12f, 0.3f);
+            AudioHub.Play(Sfx.Bell);
         }
 
         public void Say(string line) => speech.Play(line);
 
         public void CharacterHappy() => character.Hop();
         public void CharacterUpset() => character.Shake();
+
+        public void RefreshHearts(Adventurer a)
+        {
+            hearts.Set(a.Affinity);
+            Float("♥", true);
+        }
+
+        public void Float(string message, bool positive)
+        {
+            var f = Instantiate(floatPrefab, floatRoot);
+            f.gameObject.SetActive(true);
+            f.Play(message, positive);
+        }
+
+        // 판정이 끝난 서류는 모험가 쪽으로 밀려난다
+        public void DismissDocuments()
+        {
+            questDoc.Dismiss();
+            reportDoc.Dismiss();
+            evidenceItem.Dismiss();
+        }
 
         public void SetQueue(int count) => queueCountText.text = count > 0 ? $"대기 {count}명" : "대기 없음";
 
@@ -138,10 +230,12 @@ namespace GuildProto
         {
             questApprovedMark.SetActive(approved);
             questRejectedMark.SetActive(!approved);
+            deskShake.Shake();
         }
 
         // 귀환 보고: 보고서(주장 + 게시본 기입) + 책상 위 증거물
-        public void ShowReport(Assignment a, Sprite proofIcon)
+        // scale: 저울(편의 시설)이 있으면 증거물이 기입과 안 맞을 때 표시해 준다
+        public void ShowReport(Assignment a, Sprite proofIcon, bool scale = false)
         {
             questDoc.gameObject.SetActive(false);
             var q = a.Quest;
@@ -150,6 +244,10 @@ namespace GuildProto
             reportClaim.text = a.ClaimsSuccess
                 ? $"보고: <b>의뢰 완료</b>\n제출 증거: {(ev == null ? "없음" : ev.ToString())}"
                 : "보고: <color=#b02c28><b>의뢰 실패</b></color>\n제출 증거: 없음";
+            if (scale && a.ClaimsSuccess)
+                reportClaim.text += ev == null || !ev.Matches(q)
+                    ? "\n<color=#b02c28>[저울] 기입과 맞지 않는다</color>"
+                    : "\n<color=#2f7a3e>[저울] 이상 없음</color>";
             reportPosted.text = q.Entry.Monster.isMonster
                 ? $"게시본 기입: {Txt.Describe(q.Entry.Monster, q.Entry.Count)}"
                 : $"게시본 기입: 몬스터 없음 · 확인 물품 '{q.Proof}'";
@@ -171,6 +269,7 @@ namespace GuildProto
         {
             reportApprovedMark.SetActive(approved);
             reportRejectedMark.SetActive(!approved);
+            deskShake.Shake();
         }
 
         public void HideDocuments()
@@ -186,8 +285,10 @@ namespace GuildProto
             approveButton.gameObject.SetActive(!confirm);
             rejectButton.gameObject.SetActive(!confirm);
             approveButton.interactable = rejectButton.interactable = mode is Mode.QuestReview or Mode.ReportReview;
+            reportButton.interactable = mode == Mode.QuestReview;
             if (mode == Mode.QuestReview) { approveLabel.text = "수주\n승인"; rejectLabel.text = "수주\n거절"; }
             if (mode == Mode.ReportReview) { approveLabel.text = "완료\n승인"; rejectLabel.text = "보고\n반려"; }
+            bonusButton.gameObject.SetActive(mode == Mode.ReportReview);
             confirmButton.gameObject.SetActive(confirm);
             confirmButton.interactable = true;
             confirmLabel.text = confirmText;

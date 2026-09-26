@@ -20,6 +20,14 @@ namespace GuildProto
         public Sprite evidenceIcon;
         public Color evidenceTint = Color.white;
 
+        [Header("자동 생성 의뢰 재료")]
+        [Tooltip("의뢰인이 목격한 단서 (의뢰서 상황 설명에 2개쯤 섞임)")]
+        [TextArea(1, 3)] public string[] clues;
+        [Tooltip("의뢰서 제목 후보")]
+        public string[] questTitles;
+        [Tooltip("수를 짐작할 흔적 문장. {n} = 실제 수 (예: 발자국이 {n}쌍 찍혀 있었다)")]
+        public string countTrace = "흔적을 보니 {n}마리쯤이었다";
+
         [Header("판정")]
         [Tooltip("수량 1~3 / 4~7 / 8 이상일 때 권장 등급")]
         public Rank[] rankByBand = new Rank[3];

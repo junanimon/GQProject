@@ -16,11 +16,21 @@ namespace GuildProto
         public const string CompletionLine =
             "<b>완료 심사.</b> 증거물은 게시된 대상 몬스터의 증거 부위여야 하고, 개수가 기입된 수량 범위 안이어야 한다. 몬스터 없는 의뢰는 해당 물품을 확인한다.";
 
+        public const string JurisdictionLine = "<b>관할 규정.</b> 우리 길드 <b>관할 지역</b>의 마크가 찍힌 카드만 받는다.";
+
         // 창구에서 보이는 카드와 게시된 기입란 기준 검사. 문제 없으면 null
-        public static string CheckApplication(IReadOnlyList<GuildCard> cards, Quest q)
+        // managedRegions: 관할 지역 이름 (null이면 관할 검사 생략)
+        public static string CheckApplication(IReadOnlyList<GuildCard> cards, Quest q, ITempRule tempRule = null, ICollection<string> managedRegions = null)
         {
+            string temp = tempRule?.Check(cards);
+            if (temp != null) return temp;
+
             var forged = cards.FirstOrDefault(c => c.IsForged);
             if (forged != null) return $"위조 카드 ({forged.Forgery.Name}) — {forged.Name}";
+
+            var outside = managedRegions == null ? null
+                : cards.FirstOrDefault(c => !managedRegions.Contains(c.Region) && (tempRule == null || !tempRule.AcceptsRegion(c.Region)));
+            if (outside != null) return $"관할 밖 지역 카드 — '{outside.Region}' ({outside.Name})";
 
             var entry = q.Entry;
             Rank min = cards.Min(c => c.ShownRank);

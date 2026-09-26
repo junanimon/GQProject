@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: pixie
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: pixie
+  displayName: "\uC7A5\uB09C\uAFB8\uB7EC\uAE30 \uD53D\uC2DC"
+  talkName: "\uD53D\uC2DC"
+  features: "\uC190\uAC00\uB77D\uB9CC \uD55C \uC694\uC815. \uBB3C\uAC74\uC744 \uC228\uAE30\uACE0, \uC6B0\uC720\uB97C \uC3DF\uACE0, \uB9D0\uAF2C\uB9AC\uB97C \uB54B\uC544 \uB193\uB294\uB2E4. \uD0A5\uD0A5\uAC70\uB9AC\uB294 \uC6C3\uC74C\uC18C\uB9AC\uAC00 \uB4E4\uB9B0\uB2E4. \uC704\uD5D8\uD558\uC9C4 \uC54A\uC9C0\uB9CC \uC7A1\uAE30\uAC00 \uC131\uAC00\uC2DC\uB2E4. \uB3C4\uAE68\uBE44\uBD88\uACFC \uB2EC\uB9AC \uC18C\uB9AC\uAC00 \uC694\uB780\uD558\uACE0, \uBC18\uC9DD\uC774\uB294 \uAC00\uB8E8\uAC00 \uBD84\uD64D\uC0C9\uC774\uB2E4."
+  illustration: {fileID: -5064401156898091283, guid: dccbbfb7f5493454cb869ca66f9dfdc5, type: 3}
+  illustrationTint: {r: 0.95, g: 0.66, b: 0.86, a: 1}
+  evidenceName: "\uC694\uC815 \uB0A0\uAC1C\uAC00\uB8E8"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.95, g: 0.66, b: 0.86, a: 1}
+  clues:
+  - "\uC544\uCE68\uC5D0 \uBCF4\uB2C8 \uB9D0 \uAF2C\uB9AC\uAC00 \uC804\uBD80 \uB54B\uC5EC \uC788\uC5C8\uC5B4\uC694."
+  - "\uC21F\uAC00\uB77D\uC774\uB791 \uB2E8\uCD94\uAC00 \uC790\uAFB8 \uC5C6\uC5B4\uC838\uC694. \uAC00\uB054 \uB098\uBB34 \uC704 \uC0C8 \uB465\uC9C0\uC5D0\uC11C \uB098\uC640\uC694."
+  - "\uBC24\uC5D0 \uD0A5\uD0A5\uAC70\uB9AC\uB294 \uC18C\uB9AC\uAC00 \uB4E4\uB9AC\uACE0, \uC6B0\uC720 \uD1B5\uC774 \uC5CE\uC5B4\uC838 \uC788\uC5C8\uC5B4\uC694."
+  - "\uCC3D\uD2C0\uC5D0 \uBD84\uD64D\uC0C9 \uBC18\uC9DD\uC774 \uAC00\uB8E8\uAC00 \uBB3B\uC5B4 \uC788\uC5B4\uC694."
+  questTitles:
+  - "\uB204\uAC00 \uB9D0\uAF2C\uB9AC\uB97C \uB54B\uC544 \uB194\uC694"
+  - "\uC21F\uAC00\uB77D \uB3C4\uB451"
+  - "\uD0A5\uD0A5\uAC70\uB9AC\uB294 \uBC24\uC190\uB2D8"
+  countTrace: "\uD0A5\uD0A5\uAC70\uB9AC\uB294 \uBAA9\uC18C\uB9AC\uAC00 {n}\uAC00\uC9C0\uCBE4 \uB4E4\uB838\uB2E4"
+  rankByBand: 000000000100000001000000i
+  role: 0
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: 7e61b4ce8c2301a4fa5f02fe4a890cbe, type: 2}

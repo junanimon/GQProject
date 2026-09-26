@@ -21,6 +21,16 @@ MonoBehaviour:
   evidenceName: "\uC2AC\uB77C\uC784 \uD575"
   evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
   evidenceTint: {r: 0.5, g: 0.8, b: 0.84, a: 1}
+  clues:
+  - "\uC18C\uB9AC\uB294 \uC804\uD600 \uC548 \uB0AC\uC5B4\uC694."
+  - "\uBB38 \uC544\uB798 \uD2C8\uC73C\uB85C \uBB54\uAC00 \uC2A4\uBA70\uB4E0 \uD754\uC801\uC774 \uC788\uC5B4\uC694."
+  - "\uC9C0\uB098\uAC04 \uC790\uB9AC\uC758 \uBB3C\uAC74\uC774 \uB179\uC544 \uC788\uC5B4\uC694."
+  - "\uBC18\uD22C\uBA85\uD55C \uC824\uB9AC\uAC00 \uBCBD\uC5D0 \uBD99\uC5B4 \uC788\uC5C8\uC5B4\uC694."
+  questTitles:
+  - "\uCC3D\uACE0\uC758 \uC18C\uB9AC \uC5C6\uB294 \uB3C4\uB451"
+  - "\uBB3C\uAC74\uC774 \uB179\uC544 \uC788\uC5B4\uC694"
+  - "\uC6B0\uBB3C\uC774 \uC774\uC0C1\uD574\uC694"
+  countTrace: "\uB179\uC740 \uC790\uAD6D\uC774 {n}\uAD70\uB370 \uC788\uC5C8\uB2E4"
   rankByBand: 000000000100000001000000i
   role: 3
   isMonster: 1

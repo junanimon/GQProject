@@ -19,15 +19,32 @@ namespace GuildProto
             this.namedChance = namedChance;
         }
 
-        public ApplicationVisit Create(Quest q, IReadOnlyList<IForgery> forgeries)
+        // reputation: 길드 평판이 높을수록 실력 좋은(한 등급 위) 모험가가 찾아온다
+        // outside: 관할 밖 지역 (그 지역 모험가가 가끔 잘못 찾아온다 → 관할 규정 위반)
+        public ApplicationVisit Create(Quest q, IReadOnlyList<IForgery> forgeries, ITempRule rule, int reputation,
+            IReadOnlyList<RegionData> outside = null)
         {
-            if (Random.value < namedChance)
-            {
-                var named = TryNamed(q, forgeries);
-                if (named != null) return named;
-            }
-            return CreateNameless(q, forgeries);
+            upgradeChance = 0.1f + reputation / 250f;
+            var visit = rule?.TrySpecialVisit(q, roster);
+            if (visit == null && outside != null && outside.Count > 0 && Random.value < config.outsideRegionChance)
+                visit = FromOutside(q, outside[Random.Range(0, outside.Count)]);
+            if (visit == null && Random.value < namedChance) visit = TryNamed(q, forgeries);
+            visit ??= CreateNameless(q, forgeries);
+            if (rule is PlagueRule plague) plague.Infect(visit);
+            return visit;
         }
+
+        // 관할 밖 지역 모험가: 등급 · 역할은 맞지만 카드의 지역 마크가 관할이 아니다
+        ApplicationVisit FromOutside(Quest q, RegionData region)
+        {
+            var job = q.Entry.Role != Job.None ? q.Entry.Role : (Job)Random.Range(1, 5);
+            var who = roster.RegisterGuest(q.Entry.Rank, job, region.displayName);
+            return new ApplicationVisit(q, new List<GuildCard> { GuildCard.Of(who) },
+                Lines.Pick(new[] { $"{region.displayName}에서 왔어요. 거기엔 아직 길드가 없어서… 여기서 받아 주시면 안 될까요?",
+                                   "소문 듣고 멀리서 왔어요! 이 의뢰, 제 등급이면 딱이죠?" }));
+        }
+
+        float upgradeChance = 0.2f;
 
         // 네임드 한 명이 혼자 신청하러 온다
         ApplicationVisit TryNamed(Quest q, IReadOnlyList<IForgery> forgeries)
@@ -41,7 +58,7 @@ namespace GuildProto
                 if (a.Rank >= R && roleOk) picks.Add((a, false));                                   // 규정대로
                 else if (a.Rank == R - 1 && roleOk)
                 {
-                    if (forgeries.Count > 0 && Random.value < a.Named.forgeryTendency) picks.Add((a, true));  // 위조 카드
+                    if (forgeries.Count > 0 && !a.StoppedForging && Random.value < a.Named.forgeryTendency) picks.Add((a, true));  // 위조 카드 (레온은 70 이벤트 뒤로 안 씀)
                     else if (Random.value < a.Named.greed) picks.Add((a, false));                            // 욕심
                 }
                 else if (a.Rank >= R && Random.value < a.Named.greed * 0.5f) picks.Add((a, false));         // 역할 무시
@@ -80,7 +97,7 @@ namespace GuildProto
                 float t = Random.value;
                 if (t < 0.55f)
                 {
-                    Rank r = R < Rank.Gold && Random.value < 0.2f ? R + 1 : R;
+                    Rank r = R < Rank.Gold && Random.value < upgradeChance ? R + 1 : R;
                     members.Add(roster.Find(r, used, role));
                 }
                 else if (t < 0.8f || !canLow)

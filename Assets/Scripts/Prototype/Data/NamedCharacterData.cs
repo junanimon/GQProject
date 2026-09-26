@@ -14,6 +14,8 @@ namespace GuildProto
         public Job job;
         public CharacterLook look;
         [Range(0, 100)] public int startAffinity = 50;
+        [Tooltip("시작 레벨 (승급 심사용)")]
+        public int level = 3;
 
         [Header("서사")]
         [TextArea(2, 5)] public string profile;

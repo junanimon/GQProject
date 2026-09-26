@@ -12,7 +12,9 @@ namespace GuildProto
 
         public void OnPointerClick(PointerEventData e)
         {
-            if (isActiveAndEnabled) StartCoroutine(Punch());
+            if (!isActiveAndEnabled) return;
+            AudioHub.Play(Sfx.Click);
+            StartCoroutine(Punch());
         }
 
         IEnumerator Punch()

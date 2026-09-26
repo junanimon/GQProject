@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fca7b8a76b4a0d4cb38af2b9837f4d1, type: 3}
+  m_Name: Week2
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.WeekData
+  title: "\uC218\uD655 \uCD95\uC81C"
+  subtitle: "\uCD95\uC81C \uC8FC \u2014 \uC678\uBD80 \uAE38\uB4DC \uBAA8\uD5D8\uAC00\uAC00 \uBAB0\uB824\uC628\uB2E4 \xB7 \uAE38\uB4DC \uC778\uC7A5 \uD655\uC778 \uC2DC\uC791"
+  tempRule: 1
+  unlocks:
+  - day: 1
+    unlock: 1
+  sheetsPerNight: 4
+  monsterPool:
+  - {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}
+  - {fileID: 11400000, guid: b14c26ab083e17643aed91418f1b4d51, type: 2}
+  - {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}
+  - {fileID: 11400000, guid: 2c57599265534884b9ff1aaf1fb552ad, type: 2}
+  - {fileID: 11400000, guid: 1696f636d6bebd54a9a5d6d2bf723f44, type: 2}
+  - {fileID: 11400000, guid: 74aeae33ce66e3a498e6f80c273eff91, type: 2}
+  - {fileID: 11400000, guid: 13a4eb1787e2f1442a4ab3e03d8f67c7, type: 2}
+  - {fileID: 11400000, guid: f2ec47cd7faba3a41af5662e671a77b3, type: 2}
+  - {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}
+  errandChance: 0.25
+  fixedQuests:
+  - day: 1
+    quests:
+    - {fileID: 11400000, guid: 1c2220b4a34fe6d4c854f77a04a8a927, type: 2}
+    - {fileID: 11400000, guid: 8c26df7136e0e8e40955ad9721abf9df, type: 2}
+  - day: 2
+    quests:
+    - {fileID: 11400000, guid: c3a3dc7e56bcca44da6e17100eda390d, type: 2}
+    - {fileID: 11400000, guid: d1442d8e3edd88f42a62fbd26ca78b61, type: 2}
+  - day: 3
+    quests:
+    - {fileID: 11400000, guid: a3ff42a7cccb34d40b1b61400732dd40, type: 2}
+  - day: 4
+    quests:
+    - {fileID: 11400000, guid: 6eb358330cb55da40834e69ab5e814e2, type: 2}
+  intro:
+  - speaker: 
+    text: "\uB85C\uC6F0\uC5D0 \uC218\uD655 \uCD95\uC81C\uAC00 \uC2DC\uC791\uB410\uB2E4. \uAD11\uC7A5\uC5D4 \uB4F1\uBD88\uC774 \uAC78\uB9AC\uACE0, \uC678\uC9C0 \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uBAB0\uB824\uB4E4\uC5C8\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uCD95\uC81C \uC8FC\uAC04\uC774\uC57C. \uC678\uBD80 \uAE38\uB4DC \uCE74\uB4DC\uAC00 \uC794\uB729 \uB4E4\uC5B4\uC62C \uAC70\uB2E4."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC6B0\uB9AC\uAC00 \uC778\uC815\uD558\uB294 \uAC74 \uD611\uB825 \uAE38\uB4DC\uBFD0\uC774\uC57C. \uADDC\uC815\uC9D1\uC5D0 \uBAA9\uB85D \uBD99\uC5EC \uB480\uC5B4. \uBAA9\uB85D\uC5D0 \uC5C6\uB294 \uAE38\uB4DC \uC774\uB984\uC774\uBA74\u2026 \uAC00\uC9DC\uC57C."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uADF8\uB9AC\uACE0 \uC774\uBC88 \uC8FC\uBD80\uD130 \uCE74\uB4DC\uC758 \uAE38\uB4DC \uC778\uC7A5\uB3C4 \uD655\uC778\uD574. \uBC29\uD328 \uC548\uC5D0 \uC2ED\uC790. \uBAA8\uC591\uC774 \uB2E4\uB974\uBA74 \uC704\uC870\uACE0."
+  - speaker: "\uB8E8\uB8E8"
+    text: "\uCD95\uC81C\uB2E4! \uC811\uC218\uC6D0, \uCD95\uC81C \uB05D\uB098\uBA74 \uAF2C\uCE58\uAD6C\uC774 \uC0AC \uC918! \uB300\uB9C8\uBC95\uC0AC\uAC00 \uD2B9\uBCC4\uD788 \uAC19\uC774 \uBA39\uC5B4 \uC904\uAC8C!"
+  dayStories: []
+  wanted: []
+  partnerRegions:
+  - "\uC548\uAC1C \uB2AA\uC9C0"
+  - "\uC11C\uB9AC\uBD09 \uC124\uC6D0"
+  fakeRegions:
+  - "\uD669\uAE08 \uBAA8\uB798 \uC0AC\uB9C9"
+  - "\uC740\uBE5B \uD56D\uAD6C"
+  - "\uB3D9\uCABD \uC12C \uC5F0\uD569"
+  raid:
+    title: "\uCD95\uC81C \uBC24\uC758 \uC624\uD06C \uC120\uBC1C\uB300"
+    baseAttack: 32
+    intro:
+    - speaker: 
+      text: "\uCD95\uC81C\uC758 \uB9C8\uC9C0\uB9C9 \uBC24. \uB4F1\uBD88 \uB108\uBA38 \uC232\uC5D0\uC11C \uB0AE\uC740 \uACE0\uD568\uC774 \uC6B8\uB824 \uD37C\uC84C\uB2E4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\uC624\uD06C\uC57C. \uCD95\uC81C \uBD88\uBE5B\uC744 \uBCF4\uACE0 \uC120\uBC1C\uB300\uAC00 \uB0B4\uB824\uC654\uC5B4. \uC678\uC9C0 \uBAA8\uD5D8\uAC00\uB4E4\uAE4C\uC9C0 \uC804\uBD80 \uBC29\uCC45\uC73C\uB85C!"
+    - speaker: 
+      text: "\uB4F1\uBD88\uC774 \uD558\uB098\uB458 \uAEBC\uC9C0\uACE0, \uBC29\uCC45 \uC704\uB85C \uD683\uBD88\uC774 \uC62C\uB77C\uAC14\uB2E4."
+    perfect:
+    - speaker: 
+      text: "\uAD11\uC7A5\uAE4C\uC9C0 \uD55C \uBC1C\uC9DD\uB3C4 \uB4E4\uC5B4\uC624\uC9C0 \uBABB\uD588\uB2E4. {defenders}\uC774(\uAC00) \uC55E\uC7A5\uC11C \uC624\uD06C\uB4E4\uC744 \uBC00\uC5B4\uB0C8\uB2E4."
+    - speaker: '{hero}'
+      text: "\uCD95\uC81C\uB294 \uACC4\uC18D\uB41C\uB2E4! \uC811\uC218\uC6D0, \uAF2C\uCE58\uAD6C\uC774\uB294 \uB0B4\uAC00 \uC0B0\uB2E4!"
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\u2026\uC798\uD588\uC5B4. \uC678\uBD80 \uAE38\uB4DC \uB140\uC11D\uB4E4\uB3C4 \uB124 \uCC3D\uAD6C \uC598\uAE30\uB97C \uD558\uB354\uB77C."
+    close:
+    - speaker: 
+      text: "\uB4F1\uBD88 \uBA87 \uAC1C\uAC00 \uBD80\uC11C\uC9C0\uACE0, \uBB34\uB300 \uD55C\uCABD\uC774 \uBB34\uB108\uC84C\uB2E4. \uADF8\uB798\uB3C4 \uBC29\uCC45\uC740 \uBC84\uD17C\uB2E4."
+    - speaker: '{hero}'
+      text: "\uD558\u2026 \uCD95\uC81C\uAC00 \uC5C9\uB9DD\uC774 \uB410\uB124. \uADF8\uB798\uB3C4 \uB2E4\uCE5C \uC0AC\uB78C\uC740 \uC5C6\uC5B4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\uB2E4\uC74C \uC8FC\uAC00 \uAC71\uC815\uC774\uC57C. \uC694\uC998 \uC232\uC774 \uB108\uBB34 \uC2DC\uB044\uB7EC\uC6CC."
+    fail:
+    - speaker: 
+      text: "\uBC29\uCC45\uC774 \uBB34\uB108\uC84C\uB2E4!! \uBE44\uBA85\uACFC \uC6B8\uC74C\uC18C\uB9AC\uAC00 \uB4A4\uC11E\uC600\uB2E4."
+    - speaker: 
+      text: "\uADF8\uB54C, \uAE38\uB4DC 2\uCE35 \uBB38\uC774 \uC5F4\uB9AC\uACE0 \uC740\uD1F4\uD55C \uAE38\uB4DC\uC7A5\uC774 \uB0A1\uC740 \uB300\uAC80\uC744 \uB4E4\uACE0 \uB0B4\uB824\uC654\uB2E4."
+    - speaker: "\uADF8\uB77C\uD568"
+      text: "\u2026\uC624\uB79C\uB9CC\uC774\uAD70. \uBB3C\uB7EC\uC11C\uB77C, \uC560\uC1A1\uC774\uB4E4."
+    - speaker: 
+      text: "\uC801\uC740 \uBB3C\uB7EC\uB0AC\uC9C0\uB9CC \uAE38\uB4DC\uB294 \uD070 \uBE5A\uC744 \uC84C\uB2E4. \uADF8\uB77C\uD568\uC740 \uB450 \uBC88 \uB098\uC11C \uC8FC\uC9C0 \uC54A\uC744 \uAC83\uC774\uB2E4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\u2026\uB2E4\uC74C \uC2B5\uACA9\uC5D0\uC11C \uB610 \uBB34\uB108\uC9C0\uBA74, \uC774 \uB9C8\uC744\uC740 \uB05D\uC774\uC57C."

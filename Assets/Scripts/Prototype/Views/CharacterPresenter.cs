@@ -39,15 +39,19 @@ namespace GuildProto
             body.rectTransform.localScale = new Vector3(1, s, 1);
         }
 
+        [Header("상태")]
+        [Tooltip("아플 때 곱하는 색 (창백한 안색)")]
+        public Color sickTint = new(0.78f, 0.92f, 0.80f);
+
         // 다른 사람이 오면 등장 연출
-        public void Show(CharacterLook look)
+        public void Show(CharacterLook look, bool sick = false)
         {
             if (rt == null) Awake();
             gameObject.SetActive(true);
             bool changed = look != current;
             current = look;
             if (look.body != null) body.sprite = look.body;
-            body.color = look.tint;
+            body.color = sick ? look.tint * sickTint : look.tint;
             if (changed) Play(Enter());
         }
 

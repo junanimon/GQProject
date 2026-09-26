@@ -11,8 +11,11 @@ namespace GuildProto
         public Job Job { get; }
         public Color Border { get; internal set; }
         public CharacterLook Portrait { get; internal set; }
-        public bool FakeSeal { get; internal set; }
+        public bool FakeSeal { get; internal set; }   // 지역 마크 위조
         public string Number { get; internal set; }
+        public string Region { get; internal set; }   // 소속 지역 (지역 마크)
+        public Sprite Mark { get; internal set; }
+        public Color MarkTint { get; internal set; }
         public IForgery Forgery { get; internal set; }
 
         public bool IsForged => Forgery != null;
@@ -26,6 +29,9 @@ namespace GuildProto
             Border = Txt.RankColor(holder.Rank);
             Portrait = holder.Look;
             Number = holder.CardNumber;
+            Region = holder.RegionName;
+            Mark = holder.Home != null ? holder.Home.mark : null;
+            MarkTint = holder.Home != null ? holder.Home.markTint : Color.gray;
         }
 
         public static GuildCard Of(Adventurer a) => new(a);

@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fca7b8a76b4a0d4cb38af2b9837f4d1, type: 3}
+  m_Name: Week5
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.WeekData
+  title: "\uC232\uC758 \uC655"
+  subtitle: "\uC0C8 \uADDC\uCE59\uC740 \uC5C6\uB2E4. \uBC30\uC6B4 \uAC83\uC744 \uC804\uBD80 \uC4F8 \uB54C"
+  tempRule: 0
+  unlocks: []
+  sheetsPerNight: 5
+  monsterPool:
+  - {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}
+  - {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}
+  - {fileID: 11400000, guid: 67e9e4a3bc88d5b409f4b34f21dd0c86, type: 2}
+  - {fileID: 11400000, guid: f2ec47cd7faba3a41af5662e671a77b3, type: 2}
+  - {fileID: 11400000, guid: 1696f636d6bebd54a9a5d6d2bf723f44, type: 2}
+  - {fileID: 11400000, guid: 3eb761193cde77f4da8e5d84bb56993e, type: 2}
+  errandChance: 0.1
+  fixedQuests: []
+  intro:
+  - speaker: 
+    text: "\uBD81\uCABD \uC232\uC774 \uD1B5\uC9F8\uB85C \uC6B8\uACE0 \uC788\uC5C8\uB2E4. \uB098\uBB34\uB4E4\uC774 \uC4F0\uB7EC\uC9C0\uB294 \uC18C\uB9AC\uAC00 \uB9C8\uC744\uAE4C\uC9C0 \uB4E4\uB9B0\uB2E4."
+  - speaker: "\uB2C8\uC544"
+    text: "\u2026\uBB38\uC2E0\uC774, \uB728\uAC70\uC6CC."
+  - speaker: "\uB2C8\uC544"
+    text: "\uC6B0\uB9AC \uBD80\uC871\uC740 \uD769\uC5B4\uC9C4 \uAC8C \uC544\uB2C8\uC5C8\uC5B4. \uC232\uC758 \uC2EC\uC7A5\uC5D0\uC11C\u2026 \uBD09\uC778\uC744 \uBD99\uC7A1\uACE0 \uC788\uC5C8\uB358 \uAC70\uC57C. \uB098\uB294, \uC5F4\uC1E0\uC57C."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC8FC\uB9D0\uC5D0 \uC232\uC758 \uC655\uC774 \uC628\uB2E4. \uADF8 \uC804\uAE4C\uC9C0 \uC704\uD5D8\uB3C4\uB97C \uCD5C\uB300\uD55C \uB0AE\uCD94\uACE0, \uBAA8\uD5D8\uAC00\uB4E4\uC744 \uD55C \uBA85\uC774\uB77C\uB3C4 \uB354 \uC0B4\uB824 \uB46C."
+  - speaker: "\uB9C8\uB974\uD0C0"
+    text: "\uC0C8 \uADDC\uCE59\uC740 \uC5C6\uC5B4. \uC9C0\uAE08\uAE4C\uC9C0 \uBC30\uC6B4 \uAC70 \uC804\uBD80 \uC368. \u2026\uB10C \uD560 \uC218 \uC788\uC5B4."
+  dayStories: []
+  wanted: []
+  partnerGuilds: []
+  fakeGuilds: []
+  raid:
+    title: "\uC232\uC758 \uC655"
+    baseAttack: 110
+    intro:
+    - speaker: 
+      text: "\uC8FC\uB9D0 \uBC24. \uC232\uC774 \uAC78\uC5B4\uC654\uB2E4. \uB098\uBB34\uC640 \uC9D0\uC2B9\uACFC \uC5B4\uB460\uC744 \uB450\uB978 \uAC70\uB300\uD55C \uADF8\uB9BC\uC790 \u2014 \uC232\uC758 \uC655."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\uC804\uC6D0 \uBC29\uCC45\uC73C\uB85C!! \uC774\uBC88\uC774 \uB9C8\uC9C0\uB9C9\uC774\uC57C!"
+    - speaker: "\uB2C8\uC544"
+      text: "\u2026\uC811\uC218\uC6D0. \uC57D\uC18D, \uAE30\uC5B5\uD574?"
+    perfect:
+    - speaker: 
+      text: "{defenders}\uC774(\uAC00) \uAE38\uC744 \uC5F4\uC5C8\uB2E4. \uC740\uBE5B \uC5EC\uC6B0\uC758 \uB178\uB798\uAC00 \uC232\uC758 \uC655\uC744 \uAC10\uC30C\uB2E4."
+    - speaker: '{hero}'
+      text: "\uC9C0\uAE08\uC774\uC57C!! \uBAA8\uB450 \uD55C \uBC88\uC5D0!!"
+    - speaker: 
+      text: "\uC232\uC758 \uC655\uC774 \uBB34\uB98E\uC744 \uAFC7\uC5C8\uB2E4. \uBD09\uC778\uC758 \uBE5B\uC774 \uC232 \uC804\uCCB4\uB85C \uD37C\uC838 \uB098\uAC14\uB2E4."
+    close:
+    - speaker: 
+      text: "\uBC29\uCC45\uC758 \uC808\uBC18\uC774 \uBB34\uB108\uC84C\uB2E4. \uADF8\uB798\uB3C4 \uBAA8\uD5D8\uAC00\uB4E4\uC740 \uBB3C\uB7EC\uC11C\uC9C0 \uC54A\uC558\uB2E4."
+    - speaker: '{hero}'
+      text: "\uC544\uC9C1\uC774\uC57C\u2026 \uC544\uC9C1 \uB05D\uB098\uC9C0 \uC54A\uC558\uC5B4!!"
+    - speaker: 
+      text: "\uC232\uC758 \uC655\uC740 \uC0C1\uCC98 \uC785\uC740 \uCC44 \uC232\uC73C\uB85C \uBB3C\uB7EC\uB0AC\uB2E4."
+    fail:
+    - speaker: 
+      text: "\uBC29\uCC45\uC774 \uBB34\uB108\uC84C\uB2E4!! \uBE44\uBA85\uACFC \uC6B8\uC74C\uC18C\uB9AC\uAC00 \uB4A4\uC11E\uC600\uB2E4."
+    - speaker: 
+      text: "\uADF8\uB54C, \uAE38\uB4DC 2\uCE35 \uBB38\uC774 \uC5F4\uB9AC\uACE0 \uC740\uD1F4\uD55C \uAE38\uB4DC\uC7A5\uC774 \uB0A1\uC740 \uB300\uAC80\uC744 \uB4E4\uACE0 \uB0B4\uB824\uC654\uB2E4."
+    - speaker: "\uADF8\uB77C\uD568"
+      text: "\u2026\uC624\uB79C\uB9CC\uC774\uAD70. \uBB3C\uB7EC\uC11C\uB77C, \uC560\uC1A1\uC774\uB4E4."
+    - speaker: 
+      text: "\uC801\uC740 \uBB3C\uB7EC\uB0AC\uC9C0\uB9CC \uAE38\uB4DC\uB294 \uD070 \uBE5A\uC744 \uC84C\uB2E4. \uADF8\uB77C\uD568\uC740 \uB450 \uBC88 \uB098\uC11C \uC8FC\uC9C0 \uC54A\uC744 \uAC83\uC774\uB2E4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\u2026\uB2E4\uC74C \uC2B5\uACA9\uC5D0\uC11C \uB610 \uBB34\uB108\uC9C0\uBA74, \uC774 \uB9C8\uC744\uC740 \uB05D\uC774\uC57C."

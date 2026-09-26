@@ -11,16 +11,18 @@ namespace GuildProto
 
         public QuestResolver(GameConfig config) => this.config = config;
 
-        public void Resolve(Assignment a)
+        // deathUnlocked: 3주차부터 실패가 크면 사망할 수 있다
+        public void Resolve(Assignment a, bool deathUnlocked)
         {
             var q = a.Quest;
             var truth = q.Truth;
             var entry = q.Entry.Monster;
-            int capability = (int)a.Members.Min(m => m.Rank) + (a.Members.Count >= 3 ? 1 : 0);
+            int capability = (int)a.Members.Min(m => m.TrueRank) + (a.Members.Count >= 3 ? 1 : 0);   // 억지 승급자는 실제 실력으로
 
             int rankGap = Mathf.Max(0, (int)q.TruthRank - capability);
             bool roleMiss = truth.role != Job.None && a.Members.All(m => m.Job != truth.role);
-            int mismatches = rankGap + (roleMiss ? 1 : 0);
+            bool sick = a.Members.Any(m => m.IsSick);                       // 증상 있는 채로 나가면 실력이 떨어진다
+            int mismatches = rankGap + (roleMiss ? 1 : 0) + (sick ? 1 : 0);
             bool tooEasy = capability - (int)q.TruthRank >= 2;
             float avgAffinity = (float)a.Members.Average(m => m.Affinity);
 
@@ -31,6 +33,23 @@ namespace GuildProto
             var causes = new List<string>();
             if (roleMiss) causes.Add($"{Txt.J(truth.role)} 없이는 상대가 안 됐어요.");
             if (rankGap > 0) causes.Add("우리 실력으론 버거운 상대였어요.");
+            if (sick) causes.Add("(콜록) 몸이… 영 말을 안 들었어요.");
+
+            // 사망 판정
+            float deathChance = !deathUnlocked || result != Result.Fail ? 0
+                : mismatches >= 3 ? config.deathChanceSevere : mismatches == 2 ? config.deathChance : 0;
+            if (Random.value < deathChance)
+            {
+                var victims = a.Members.Count == 1 ? a.Members.ToList() : new List<Adventurer> { a.Members[Random.Range(0, a.Members.Count)] };
+                foreach (var v in victims) a.Kill(v);
+                foreach (var m in a.Members.Where(m => !m.IsDead)) m.ChangeAffinity(-15);
+                string dead = string.Join(", ", victims.Select(v => v.Name));
+                string msg = a.AllDead
+                    ? null
+                    : $"{string.Join(" ", causes)} …{dead}{Txt.Josa(dead, "은", "는")} 돌아오지 못했어요. 제가… 제가 끌고 오지 못했어요.";
+                a.SetOutcome(Result.Fail, msg, truth.isMonster ? 6 : 0, false, false, null);
+                return;
+            }
 
             string report;
             bool claims, lying = false;
@@ -38,6 +57,7 @@ namespace GuildProto
 
             if (result != Result.Fail)
             {
+                foreach (var m in a.Members) m.GainExperience(result == Result.Great);
                 // 성공: 게시본 기입대로 증거물을 가져온다 (기입이 틀렸어도 창구에선 멀쩡해 보인다)
                 claims = true;
                 evidence = entry.isMonster

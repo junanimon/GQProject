@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a763d05f3b78a14fa8261f03bd9ebbc, type: 3}
+  m_Name: mine
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.RegionData
+  displayName: "\uD68C\uC0C9 \uAD11\uC0B0"
+  description: "\uB3D9\uCABD \uAD6C\uB989\uC758 \uD3D0\uAD11\uACFC \uCC44\uC11D\uC7A5. \uC5B4\uB460 \uC18D \uC9D0\uC2B9\uACFC \uB3CC\uC744 \uBA39\uB294 \uAC83\uB4E4\uC774 \uC0B0\uB2E4."
+  mark: {fileID: -7073072253803477229, guid: 578ceb20cfde1be4fada671d8481c80e, type: 3}
+  markTint: {r: 0.5, g: 0.52, b: 0.6, a: 1}
+  unlockRank: 3
+  newcomers: 3
+  unlockNote: "\uAD11\uC0B0 \uB9C8\uC744 '\uADF8\uB808\uC774\uB85D'\uC774 \uC758\uB8B0\uB97C \uB9E1\uACA8 \uC624\uAE30 \uC2DC\uC791\uD588\uB2E4."
+  monsters:
+  - {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}
+  - {fileID: 11400000, guid: 67e9e4a3bc88d5b409f4b34f21dd0c86, type: 2}
+  - {fileID: 11400000, guid: 3a18a399c827e644d98fa8d3722bbb58, type: 2}
+  - {fileID: 11400000, guid: 1d131e524953eb847a5fe8d92e4bc0fa, type: 2}
+  - {fileID: 11400000, guid: b8e599037cb4b1a4aa9d3cbf33410775, type: 2}
+  - {fileID: 11400000, guid: 4161dfc1482d59846b6cf9d0e0c02172, type: 2}
+  - {fileID: 11400000, guid: 5f2516a7b60c4264081072fa453f7e49, type: 2}
+  - {fileID: 11400000, guid: 2c8e56d069ead024d9438a18e4ceda41, type: 2}
+  - {fileID: 11400000, guid: 0ae1c9faa6bede3438555d97c6db3981, type: 2}
+  - {fileID: 11400000, guid: 9a79848f289a0e947b6645a1fb2c8eda, type: 2}

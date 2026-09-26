@@ -12,10 +12,11 @@ namespace GuildProto
         public Text rankText;
         public Text jobText;
         public Text numberText;
+        public Text issuerText;
         public Image seal;
-        [Tooltip("정식 길드 인장")]
+        [Tooltip("지역 마크가 없을 때 쓰는 기본 마크")]
         public Sprite officialSeal;
-        [Tooltip("위조 인장")]
+        [Tooltip("위조된 지역 마크")]
         public Sprite fakeSeal;
 
         public void Bind(GuildCard c)
@@ -28,7 +29,10 @@ namespace GuildProto
             rankText.text = $"등급   <b>{Txt.R(c.ShownRank)}</b>";
             jobText.text = $"직업   <b>{Txt.J(c.Job)}</b>";
             numberText.text = $"No. {c.Number}";
-            seal.sprite = c.FakeSeal ? fakeSeal : officialSeal;
+            if (issuerText != null)
+                issuerText.text = $"소속 지역: <b>{c.Region}</b>";
+            seal.sprite = c.FakeSeal ? fakeSeal : c.Mark != null ? c.Mark : officialSeal;
+            seal.color = c.MarkTint;
         }
     }
 }

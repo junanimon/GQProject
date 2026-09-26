@@ -40,11 +40,38 @@ namespace GuildProto
         {
             if (rt == null) Awake();
             gameObject.SetActive(true);
+            transform.localScale = Vector3.one;
             rt.SetAsLastSibling();
             rt.position = spawn.position;
             var target = rt.anchoredPosition;
             StopAllCoroutines();
             StartCoroutine(Slide(target + slideFrom, target));
+            AudioHub.Play(Sfx.Paper);
+        }
+
+        // 처리가 끝난 서류: 잠시 뒤 모험가 쪽으로 밀려나며 사라진다
+        public void Dismiss(float delay = 0.45f)
+        {
+            if (!isActiveAndEnabled) return;
+            StopAllCoroutines();
+            StartCoroutine(Leave(delay));
+        }
+
+        IEnumerator Leave(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            var start = rt.anchoredPosition;
+            var to = start + new Vector2(-260, 60);
+            for (float t = 0; t < slideTime; t += Time.deltaTime)
+            {
+                float k = t / slideTime;
+                rt.anchoredPosition = Vector2.Lerp(start, to, k * k);
+                transform.localScale = Vector3.one * Mathf.Lerp(1, 0.85f, k);
+                yield return null;
+            }
+            transform.localScale = Vector3.one;
+            rt.anchoredPosition = start;
+            gameObject.SetActive(false);
         }
 
         IEnumerator Slide(Vector2 from, Vector2 to)

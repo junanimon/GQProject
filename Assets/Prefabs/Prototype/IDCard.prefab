@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuildProto.DraggableDocument
   keepVisible: 80
+  slideFrom: {x: -320, y: 0}
+  slideTime: 0.28
 --- !u!114 &780521385703043509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +206,7 @@ MonoBehaviour:
   rankText: {fileID: 6185725083473867431}
   jobText: {fileID: 3139042060163235556}
   numberText: {fileID: 2182813671869897835}
+  issuerText: {fileID: 3431036161693505454}
   seal: {fileID: 778287996948963268}
   officialSeal: {fileID: -7073072253803477229, guid: 578ceb20cfde1be4fada671d8481c80e, type: 3}
   fakeSeal: {fileID: -4420811531043415741, guid: f9ccce00b981f1e4b9416258641a25df, type: 3}

@@ -39,11 +39,11 @@ namespace GuildProto
         protected override void Tamper(GuildCard card, AdventurerRoster roster) => card.Border = Txt.RankColor(card.Holder.Rank);
     }
 
-    // 카드를 통째로 만들었다 → 인장 모양이 다름
+    // 카드를 통째로 만들었다 → 지역 마크 모양이 다름
     public class SealForgery : ForgeryBase
     {
-        public override string Name => "길드 인장";
-        public override string RuleLine => "<b>규정 5.</b> 카드의 길드 인장은 아래 정식 인장과 모양이 같아야 한다.";
+        public override string Name => "지역 마크";
+        public override string RuleLine => "<b>규정 5.</b> 카드의 지역 마크는 아래 견본과 모양이 같아야 한다. (색만 같고 모양이 다르면 위조)";
         protected override void Tamper(GuildCard card, AdventurerRoster roster) => card.FakeSeal = true;
     }
 
@@ -70,19 +70,20 @@ namespace GuildProto
         protected override void Tamper(GuildCard card, AdventurerRoster roster) => card.Number = card.Holder.CardNumber;
     }
 
-    // 하루가 지날 때마다 하나씩 해금 (2일차부터)
+    // 해금 항목 → 위조 종류 (해금 시점은 WeekData.unlocks가 정한다)
     public static class ForgeryCatalog
     {
-        static readonly IForgery[] unlockOrder = { new BorderForgery(), new SealForgery(), new PortraitForgery(), new NumberForgery() };
-
-        public static IReadOnlyList<IForgery> UnlockedOn(int day) =>
-            unlockOrder.Take(Mathf.Clamp(day - 1, 0, unlockOrder.Length)).ToList();
-
-        // 그날 새로 열린 위조 (없으면 null)
-        public static IForgery NewOn(int day)
+        static readonly Dictionary<Unlock, IForgery> byUnlock = new()
         {
-            var now = UnlockedOn(day);
-            return now.Count > UnlockedOn(day - 1).Count ? now[now.Count - 1] : null;
-        }
+            { Unlock.Border, new BorderForgery() },
+            { Unlock.Seal, new SealForgery() },
+            { Unlock.Portrait, new PortraitForgery() },
+            { Unlock.Number, new NumberForgery() },
+        };
+
+        public static IForgery For(Unlock u) => byUnlock.TryGetValue(u, out var f) ? f : null;
+
+        public static IReadOnlyList<IForgery> From(IEnumerable<Unlock> unlocks) =>
+            unlocks.Select(For).Where(f => f != null).ToList();
     }
 }

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a763d05f3b78a14fa8261f03bd9ebbc, type: 3}
+  m_Name: outskirts
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.RegionData
+  displayName: "\uB85C\uC6F0 \uADFC\uAD50"
+  description: "\uB85C\uC6F0 \uB9C8\uC744\uACFC \uBC2D, \uAC1C\uC6B8, \uC232 \uAC00\uC7A5\uC790\uB9AC\uC640 \uC61B \uCC44\uC11D\uC7A5. \uAE38\uB4DC\uAC00 \uCC98\uC74C\uBD80\uD130 \uB9E1\uC544 \uC628 \uACF3."
+  mark: {fileID: -7073072253803477229, guid: 578ceb20cfde1be4fada671d8481c80e, type: 3}
+  markTint: {r: 0.45, g: 0.62, b: 0.32, a: 1}
+  unlockRank: 1
+  newcomers: 0
+  unlockNote: 
+  monsters:
+  - {fileID: 11400000, guid: b14c26ab083e17643aed91418f1b4d51, type: 2}
+  - {fileID: 11400000, guid: 74aeae33ce66e3a498e6f80c273eff91, type: 2}
+  - {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}
+  - {fileID: 11400000, guid: 3eb761193cde77f4da8e5d84bb56993e, type: 2}
+  - {fileID: 11400000, guid: 2c57599265534884b9ff1aaf1fb552ad, type: 2}
+  - {fileID: 11400000, guid: 1696f636d6bebd54a9a5d6d2bf723f44, type: 2}
+  - {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}
+  - {fileID: 11400000, guid: 13a4eb1787e2f1442a4ab3e03d8f67c7, type: 2}
+  - {fileID: 11400000, guid: f2ec47cd7faba3a41af5662e671a77b3, type: 2}
+  - {fileID: 11400000, guid: abd1a8285fa8aff4998d47e195ab9dc3, type: 2}

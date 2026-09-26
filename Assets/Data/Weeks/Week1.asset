@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fca7b8a76b4a0d4cb38af2b9837f4d1, type: 3}
+  m_Name: Week1
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.WeekData
+  title: "\uD55C\uAC00\uB85C\uC6B4 \uC2DC\uC791"
+  subtitle: "\uBCC0\uACBD\uC758 \uC791\uC740 \uB9C8\uC744 \uB85C\uC6F0, \uD3C9\uD654\uB85C\uC6B4 \uCCAB \uC8FC"
+  tempRule: 0
+  unlocks:
+  - day: 3
+    unlock: 0
+  sheetsPerNight: 3
+  monsterPool:
+  - {fileID: 11400000, guid: 57666bc5dde5b734d96af0624b4c6d0e, type: 2}
+  - {fileID: 11400000, guid: 3eb761193cde77f4da8e5d84bb56993e, type: 2}
+  - {fileID: 11400000, guid: b14c26ab083e17643aed91418f1b4d51, type: 2}
+  - {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}
+  - {fileID: 11400000, guid: 2c57599265534884b9ff1aaf1fb552ad, type: 2}
+  - {fileID: 11400000, guid: 1696f636d6bebd54a9a5d6d2bf723f44, type: 2}
+  - {fileID: 11400000, guid: 74aeae33ce66e3a498e6f80c273eff91, type: 2}
+  errandChance: 0.2
+  fixedQuests:
+  - day: 1
+    quests:
+    - {fileID: 11400000, guid: 6f9237110919a4b419f7e8729d566100, type: 2}
+    - {fileID: 11400000, guid: 83942056d1f21d9449ec3ca6c68cab00, type: 2}
+    - {fileID: 11400000, guid: 6c8a414faaea46a40a7353f7eed476dd, type: 2}
+  - day: 2
+    quests:
+    - {fileID: 11400000, guid: 83c065d16705454499b3478dc90a71f7, type: 2}
+    - {fileID: 11400000, guid: 36c45fda606772d4b9957f2d52d4f30e, type: 2}
+    - {fileID: 11400000, guid: 2016e668f32e50f429052cebe6b81f62, type: 2}
+  - day: 3
+    quests:
+    - {fileID: 11400000, guid: 50510dac4a728ad4182aa0d734b3b152, type: 2}
+    - {fileID: 11400000, guid: acd757ff7f7a0384da736b31f9661c10, type: 2}
+    - {fileID: 11400000, guid: acaeed5e3ccf61f4a810f3bda1780f8c, type: 2}
+    - {fileID: 11400000, guid: b3e1a2a4fc657aa449d73dff0ff2a49b, type: 2}
+  - day: 4
+    quests:
+    - {fileID: 11400000, guid: ac11f8e490c3d5543a761a3a6d72cd2e, type: 2}
+    - {fileID: 11400000, guid: c1b14ead8e295a14c9057eb0f92417f6, type: 2}
+    - {fileID: 11400000, guid: 62f8a1ce33700f94badf86be37a14d09, type: 2}
+    - {fileID: 11400000, guid: d572aa6c1858e614d91388a6080b3858, type: 2}
+  intro: []
+  dayStories: []
+  wanted: []
+  partnerGuilds: []
+  fakeGuilds: []
+  raid:
+    title: "\uB291\uB300 \uBB34\uB9AC\uC758 \uB0A8\uD558"
+    baseAttack: 20
+    intro:
+    - speaker: 
+      text: "\uC8FC\uB9D0 \uBC24. \uBD81\uCABD \uC232\uC5D0\uC11C \uAE38\uAC8C \uC774\uC5B4\uC9C0\uB294 \uC6B8\uC74C\uC18C\uB9AC\uAC00 \uB9C8\uC744\uC744 \uB36E\uC5C8\uB2E4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\uC654\uB2E4. \uB291\uB300 \uBB34\uB9AC\uC57C. \uC774\uBC88 \uC8FC\uC5D0 \uB124\uAC00 \uAC78\uB7EC \uB0B8 \uC758\uB8B0\uB4E4\uC774\u2026 \uC9C0\uAE08 \uACB0\uACFC\uB85C \uB3CC\uC544\uC628\uB2E4."
+    - speaker: 
+      text: "\uB9C8\uC744 \uC704\uD5D8\uB3C4\uAC00 \uACE7 \uC2B5\uACA9\uC758 \uADDC\uBAA8\uB2E4. \uC26C\uACE0 \uC788\uB358 \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uBC29\uCC45\uC73C\uB85C \uBAA8\uC5EC\uB4E0\uB2E4."
+    perfect:
+    - speaker: 
+      text: "\uBD81\uBB38\uC5D0 \uBD88\uC774 \uBC1D\uD600\uC9C0\uC790 \uAC00\uC7A5 \uBA3C\uC800 \uB2EC\uB824 \uB098\uC628 \uC774\uB984\uB4E4 \u2014 {defenders}."
+    - speaker: '{hero}'
+      text: "\uC811\uC218\uC6D0! \uC5EC\uAE30\uB294 \uC6B0\uB9AC\uAC00 \uB9E1\uC744\uAC8C. \uC548\uC5D0 \uC788\uC5B4!"
+    - speaker: 
+      text: "\uC0C8\uBCBD\uC774 \uC624\uAE30 \uC804\uC5D0 \uB291\uB300\uB4E4\uC740 \uC232\uC73C\uB85C \uBB3C\uB7EC\uB0AC\uB2E4. \uBD80\uC0C1\uC790 \uC5C6\uC74C."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\u2026\uC798\uD588\uC5B4. \uB124\uAC00 \uBCF4\uB0B8 \uC758\uB8B0\uB4E4\uC774, \uB124\uAC00 \uB9C9\uC544 \uB0B8 \uC0AC\uACE0\uB4E4\uC774 \uC624\uB298 \uB9C8\uC744\uC744 \uC9C0\uCF30\uC5B4."
+    close:
+    - speaker: 
+      text: "\uB3D9\uBB38\uC774 \uB6AB\uB9B4 \uBED4\uD588\uB2E4. \uC9C0\uCE5C \uBAA8\uD5D8\uAC00\uB4E4\uC774 \uBA87 \uBC88\uC774\uACE0 \uB2E4\uC2DC \uC77C\uC5B4\uC130\uB2E4."
+    - speaker: '{hero}'
+      text: "\uD558\uC544, \uD558\uC544\u2026 \uAC04\uC2E0\uD788\u2026 \uB9C9\uC558\uC5B4. \uB2E4\uC74C \uC8FC\uC5D4\u2026 \uC880 \uB354 \uBD80\uD0C1\uD574, \uC811\uC218\uC6D0."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\uBC84\uD17C\uB2E4. \uADF8\uAC78\uB85C \uB410\uC5B4. \u2026\uD558\uC9C0\uB9CC \uC704\uD5D8\uB3C4\uAC00 \uC774\uB807\uAC8C \uB192\uC73C\uBA74 \uB2E4\uC74C\uC5D4 \uC7A5\uB2F4 \uBABB \uD574."
+    fail:
+    - speaker: 
+      text: "\uBC29\uCC45\uC774 \uBB34\uB108\uC84C\uB2E4!! \uBE44\uBA85\uACFC \uC6B8\uC74C\uC18C\uB9AC\uAC00 \uB4A4\uC11E\uC600\uB2E4."
+    - speaker: 
+      text: "\uADF8\uB54C, \uAE38\uB4DC 2\uCE35 \uBB38\uC774 \uC5F4\uB9AC\uACE0 \uC740\uD1F4\uD55C \uAE38\uB4DC\uC7A5\uC774 \uB0A1\uC740 \uB300\uAC80\uC744 \uB4E4\uACE0 \uB0B4\uB824\uC654\uB2E4."
+    - speaker: "\uADF8\uB77C\uD568"
+      text: "\u2026\uC624\uB79C\uB9CC\uC774\uAD70. \uBB3C\uB7EC\uC11C\uB77C, \uC560\uC1A1\uC774\uB4E4."
+    - speaker: 
+      text: "\uC801\uC740 \uBB3C\uB7EC\uB0AC\uC9C0\uB9CC \uAE38\uB4DC\uB294 \uD070 \uBE5A\uC744 \uC84C\uB2E4. \uADF8\uB77C\uD568\uC740 \uB450 \uBC88 \uB098\uC11C \uC8FC\uC9C0 \uC54A\uC744 \uAC83\uC774\uB2E4."
+    - speaker: "\uB9C8\uB974\uD0C0"
+      text: "\u2026\uB2E4\uC74C \uC2B5\uACA9\uC5D0\uC11C \uB610 \uBB34\uB108\uC9C0\uBA74, \uC774 \uB9C8\uC744\uC740 \uB05D\uC774\uC57C."

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd8e2a9458b4f46b610759492e8b360, type: 3}
+  m_Name: "W2_\uC220\uCC3D\uACE0"
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.QuestData
+  title: "\uCD95\uC81C \uC220 \uCC3D\uACE0\uC758 \uBD88\uCCAD\uAC1D"
+  client: "\uC5EC\uAD00 \uC8FC\uC778 (\uB2E4\uAE09\uD568)"
+  region: "\uC5EC\uAD00 '\uC878\uB9B0 \uACF0' \uC220 \uCC3D\uACE0"
+  description: "\uCD95\uC81C\uC6A9 \uC220\uD1B5\uC744 \uAE68\uBD80\uC218\uB294 \uB188\uB4E4\uC774 \uC788\uC5B4\uC694! \uC0AC\uB78C\uBCF4\uB2E4 \uD070 \uB179\uC0C9 \uB188\uC774 \uB0AE\uC740 \uBAA9\uC18C\uB9AC\uB85C \uACE0\uD568\uC744 \uCE58\uACE0, \uC791\uC740 \uCD08\uB85D \uB140\uC11D\uB4E4\uC774 \uADF8 \uB4A4\uB97C \uC878\uC878 \uB530\uB77C\uB2E4\uB140\uC694. \uD070 \uC7A5\uD654 \uBC1C\uC790\uAD6D\uC740 \uB450 \uC30D\uC774\uC5C8\uC5B4\uC694."
+  deadline: 2
+  reward: 220
+  proof: 
+  truthMonster: {fileID: 11400000, guid: a776734c79a90584d9d4fa479d4e1d35, type: 2}
+  truthCount: 0
+  truthNumber: 2

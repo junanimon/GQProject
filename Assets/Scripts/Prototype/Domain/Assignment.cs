@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GuildProto
 {
@@ -18,6 +19,11 @@ namespace GuildProto
         public bool ClaimsSuccess { get; private set; }
         public bool IsLying { get; private set; }
         public Evidence Evidence { get; private set; }  // 없으면 null
+        public IReadOnlyList<Adventurer> Casualties => casualties;
+        public IEnumerable<Adventurer> Survivors => Members.Where(m => !m.IsDead);
+        public bool AllDead => Members.All(m => m.IsDead);
+
+        readonly List<Adventurer> casualties = new();
 
         public Assignment(Quest quest, IReadOnlyList<Adventurer> members, string violation, int day)
         {
@@ -26,7 +32,11 @@ namespace GuildProto
             Violation = violation;
             DayAccepted = day;
             quest.AssignTo(this);
-            foreach (var m in members) m.Depart();
+            foreach (var m in members)
+            {
+                m.Depart();
+                m.Sortie();
+            }
         }
 
         public string MemberNames => Members.Count == 1 ? Members[0].Name : $"{Members[0].Name} 외 {Members.Count - 1}명";
@@ -42,12 +52,19 @@ namespace GuildProto
             IsResolved = true;
         }
 
+        // 사망 판정 (3주차부터)
+        public void Kill(Adventurer member)
+        {
+            member.Die();
+            casualties.Add(member);
+        }
+
         // 창구에서 귀환 보고를 마침 (수수료 여부와 관계없이)
         public void CompleteReturn(Guild guild)
         {
             guild.ChangeDanger(DangerDelta);
             IsReported = true;
-            foreach (var m in Members) m.Return();
+            foreach (var m in Survivors) m.Return();
         }
     }
 }
