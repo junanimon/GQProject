@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: yeti
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: yeti
+  displayName: "\uC608\uD2F0"
+  talkName: "\uC608\uD2F0"
+  features: "\uB450 \uBC1C\uB85C \uAC77\uB294 \uD558\uC580 \uD138\uC758 \uAC70\uC778. \uBC14\uC704\uB97C \uB358\uC9C0\uACE0 \uAC00\uC2B4\uC744 \uB450\uB4DC\uB824 \uC6B4\uB2E4. \uB3D9\uAD74\uC5D0 \uBA39\uC774\uB97C \uC313\uC544 \uB454\uB2E4. \uC815\uBA74\uC5D0\uC11C \uB9C9\uC544 \uC904 \uC804\uC0AC\uAC00 \uAF2D \uD544\uC694\uD558\uB2E4. \uBC31\uACF0\uACFC \uB2EC\uB9AC \uB450 \uBC1C\uB85C \uC11C\uC11C \uAC77\uACE0 \uC190\uC73C\uB85C \uBB3C\uAC74\uC744 \uC954\uB2E4."
+  illustration: {fileID: 8539566862590955623, guid: 9b6dd05c5503d344ab4d33d6dd77b854, type: 3}
+  illustrationTint: {r: 0.92, g: 0.94, b: 0.97, a: 1}
+  evidenceName: "\uC608\uD2F0 \uD138 \uBB49\uCE58"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.92, g: 0.94, b: 0.97, a: 1}
+  clues:
+  - "\uD558\uC580 \uD138\uD22C\uC131\uC774 \uAC70\uC778\uC774 \uB450 \uBC1C\uB85C \uAC78\uC5B4\uC11C \uACE0\uAC1C\uB97C \uB118\uC5B4\uAC14\uC5B4\uC694."
+  - "\uCFF5\uCFF5 \uAC00\uC2B4 \uB450\uB4DC\uB9AC\uB294 \uC18C\uB9AC \uB2E4\uC74C\uC5D0 \uD070 \uBC14\uC704\uAC00 \uB0A0\uC544\uC654\uC5B4\uC694."
+  - "\uB3D9\uAD74 \uC55E\uC5D0 \uBF08\uAC00 \uC0B0\uCC98\uB7FC \uC313\uC5EC \uC788\uC5B4\uC694."
+  - "\uB208 \uC704 \uBC1C\uC790\uAD6D\uC774 \uC0AC\uB78C \uBC1C \uBAA8\uC591\uC778\uB370 \uC81C \uBC1C \uC138 \uBC30\uC608\uC694."
+  questTitles:
+  - "\uB450 \uBC1C\uB85C \uAC77\uB294 \uD558\uC580 \uAC70\uC778"
+  - "\uB0A0\uC544\uC628 \uBC14\uC704"
+  - "\uACE0\uAC1C \uB108\uBA38\uC758 \uD070 \uBC1C\uC790\uAD6D"
+  countTrace: "\uB450 \uBC1C \uAC70\uC778 \uBC1C\uC790\uAD6D\uC774 {n}\uC30D \uC774\uC5B4\uC838 \uC788\uC5C8\uB2E4"
+  rankByBand: 020000000200000002000000i
+  role: 1
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: 08a0e8b61ff22b14a9f29835675dc95a, type: 2}

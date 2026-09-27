@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: frostharpy
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: frostharpy
+  displayName: "\uC11C\uB9AC \uD558\uD53C"
+  talkName: "\uC11C\uB9AC \uD558\uD53C"
+  features: "\uD478\uB978 \uAE43\uD138\uC758 \uD558\uD53C. \uC124\uC0B0 \uBCBC\uB791\uC5D0 \uB5BC \uC9C0\uC5B4 \uC0B4\uBA70, \uB0A0\uCE74\uB85C\uC6B4 \uB178\uB798\uB85C \uC0AC\uB78C\uC744 \uD640\uB824 \uBCBC\uB791\uC73C\uB85C \uBD80\uB978\uB2E4. \uAE43\uD138 \uB05D\uC5D0 \uC11C\uB9AC\uAC00 \uC549\uC544 \uC788\uB2E4. \uADFC\uAD50\uC758 \uD558\uD53C\uBCF4\uB2E4 \uD06C\uACE0 \uBB34\uB9AC\uAC00 \uB9CE\uB2E4. \uAD81\uC218\uAC00 \uD544\uC694\uD558\uB2E4."
+  illustration: {fileID: -5064401156898091283, guid: dccbbfb7f5493454cb869ca66f9dfdc5, type: 3}
+  illustrationTint: {r: 0.66, g: 0.76, b: 0.92, a: 1}
+  evidenceName: "\uC11C\uB9AC \uD558\uD53C \uAE43\uD138"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.66, g: 0.76, b: 0.92, a: 1}
+  clues:
+  - "\uBCBC\uB791 \uC704\uC5D0\uC11C \uB178\uB7AB\uC18C\uB9AC\uAC00 \uB4E4\uB9AC\uB354\uB2C8 \uC9D0\uAFBC\uC774 \uADF8\uCABD\uC73C\uB85C \uAC78\uC5B4\uAC00\uB824\uACE0 \uD588\uC5B4\uC694."
+  - "\uD478\uB978 \uAE43\uD138\uC5D0 \uC11C\uB9AC\uAC00 \uD558\uC597\uAC8C \uC549\uC544 \uC788\uC5B4\uC694."
+  - "\uC5EC\uC790 \uC5BC\uAD74\uC744 \uD55C \uC0C8 \uB5BC\uAC00 \uCD08\uC18C \uC704\uB97C \uBE59\uBE59 \uB3CC\uC544\uC694."
+  - "\uD558\uD53C \uAC19\uC740\uB370 \uC0C9\uC774 \uD30C\uB797\uACE0 \uD6E8\uC52C \uCEE4\uC694."
+  questTitles:
+  - "\uBCBC\uB791\uC758 \uB178\uB7AB\uC18C\uB9AC"
+  - "\uC11C\uB9AC \uC549\uC740 \uD478\uB978 \uAE43\uD138"
+  - "\uCD08\uC18C \uC704\uB97C \uB3C4\uB294 \uC0C8 \uB5BC"
+  countTrace: "\uBCBC\uB791\uC5D0 \uD478\uB978 \uAE43\uD138\uC774 {n}\uAD70\uB370 \uB5A8\uC5B4\uC838 \uC788\uC5C8\uB2E4"
+  rankByBand: 010000000100000002000000i
+  role: 2
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: f2ec47cd7faba3a41af5662e671a77b3, type: 2}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: wyvern
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: wyvern
+  displayName: "\uC640\uC774\uBC88"
+  talkName: "\uC640\uC774\uBC88"
+  features: "\uB0A0\uAC1C \uB2EC\uB9B0 \uB450 \uBC1C \uC6A9. \uAF2C\uB9AC \uB05D \uB3C5\uCE68\uC73C\uB85C \uCC0C\uB974\uACE0, \uCC14\uB9B0 \uACF3\uC774 \uAC80\uAC8C \uBC88\uC9C4\uB2E4. \uBE44\uB298\uACFC \uB0A0\uAC1C\uB9C9\uBFD0 \uAE43\uD138\uC740 \uC5C6\uB2E4. \uB3C5\uC744 \uB9C9\uC544 \uC904 \uC131\uC9C1\uC790\uAC00 \uD544\uC694\uD558\uB2E4. \uADF8\uB9AC\uD3F0\uBCF4\uB2E4 \uB0A0\uAC2F\uC9D3 \uC18C\uB9AC\uAC00 \uB454\uD0C1\uD558\uACE0, \uBD88\uC740 \uBFDC\uC9C0 \uC54A\uB294\uB2E4."
+  illustration: {fileID: -5064401156898091283, guid: dccbbfb7f5493454cb869ca66f9dfdc5, type: 3}
+  illustrationTint: {r: 0.4, g: 0.46, b: 0.36, a: 1}
+  evidenceName: "\uC640\uC774\uBC88 \uB3C5\uCE68"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.4, g: 0.46, b: 0.36, a: 1}
+  clues:
+  - "\uBC15\uC950 \uB0A0\uAC1C \uAC19\uC740 \uAC78 \uB2E8 \uB3C4\uB9C8\uBC40\uC774 \uB0A0\uC544\uC654\uC5B4\uC694. \uC5C4\uCCAD \uCEE4\uC694."
+  - "\uAF2C\uB9AC\uC5D0 \uCC14\uB9B0 \uC591\uC774 \uCC14\uB9B0 \uC790\uB9AC\uBD80\uD130 \uAE4C\uB9E3\uAC8C \uBCC0\uD588\uC5B4\uC694."
+  - "\uCD08\uC18C \uC9C0\uBD95\uC5D0 \uBE44\uB298 \uAE01\uD78C \uC790\uAD6D\uC774 \uC788\uC5B4\uC694. \uAE43\uD138\uC740 \uD558\uB098\uB3C4 \uC5C6\uC5C8\uACE0\uC694."
+  - "\uD384\uB7ED, \uD384\uB7ED \uB454\uD0C1\uD55C \uB0A0\uAC2F\uC18C\uB9AC\uAC00 \uBA38\uB9AC \uC704\uB97C \uC9C0\uB098\uAC14\uC5B4\uC694."
+  questTitles:
+  - "\uB0A0\uAC1C \uB2EC\uB9B0 \uB3C4\uB9C8\uBC40"
+  - "\uAE4C\uB9E3\uAC8C \uBCC0\uD55C \uC0C1\uCC98"
+  - "\uC9C0\uBD95\uC758 \uBE44\uB298 \uC790\uAD6D"
+  countTrace: "\uBE44\uB298 \uAE01\uD78C \uC790\uAD6D\uC774 {n}\uAD70\uB370 \uC788\uC5C8\uB2E4"
+  rankByBand: 020000000200000002000000i
+  role: 4
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: e5a9de5cb6ed32542aa547a31db9a3eb, type: 2}

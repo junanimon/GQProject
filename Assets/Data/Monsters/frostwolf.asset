@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b41b3327e386449c31e460b304f2c, type: 3}
+  m_Name: frostwolf
+  m_EditorClassIdentifier: Assembly-CSharp::GuildProto.MonsterData
+  id: frostwolf
+  displayName: "\uC124\uC6D0 \uB291\uB300"
+  talkName: "\uC124\uC6D0 \uB291\uB300"
+  features: "\uB208\uCC98\uB7FC \uD770 \uD138\uC758 \uD070 \uB291\uB300. \uB208\uBCF4\uB77C\uB97C \uD0C0\uACE0 \uBB34\uB9AC\uB85C \uC0AC\uB0E5\uD55C\uB2E4. \uC785\uAE40\uC774 \uB2FF\uC73C\uBA74 \uC0B4\uAC17\uC774 \uC5B8\uB2E4. \uB208\uBC2D\uC5D0\uC11C \uBCF4\uC774\uC9C0 \uC54A\uC544 \uBA40\uB9AC\uC11C \uC3D8\uB294 \uAD81\uC218\uAC00 \uD544\uC694\uD558\uB2E4. \uB85C\uC6F0 \uADFC\uAD50\uC758 \uB291\uB300\uBCF4\uB2E4 \uD55C \uBC30 \uBC18\uC740 \uD06C\uACE0, \uBC1C\uC790\uAD6D \uC8FC\uC704\uC5D0 \uC11C\uB9AC\uAC00 \uB080\uB2E4."
+  illustration: {fileID: -6348806237195144154, guid: 067e51a8bb56c0c489f21efed41c66b2, type: 3}
+  illustrationTint: {r: 0.86, g: 0.9, b: 0.96, a: 1}
+  evidenceName: "\uC124\uC6D0 \uB291\uB300 \uC1A1\uACF3\uB2C8"
+  evidenceIcon: {fileID: 1729840402284382006, guid: a7c0abfbe180f034f8d095ca8b880eee, type: 3}
+  evidenceTint: {r: 0.86, g: 0.9, b: 0.96, a: 1}
+  clues:
+  - "\uB208\uBCF4\uB77C \uC18D\uC5D0\uC11C \uD558\uC580 \uAC8C \uC5EC\uB7FF \uC6C0\uC9C1\uC600\uC5B4\uC694. \uB208\uB9CC \uD30C\uB797\uAC8C \uBE5B\uB0AC\uC5B4\uC694."
+  - "\uBC1C\uC790\uAD6D \uB458\uB808\uC5D0 \uC11C\uB9AC\uAC00 \uD558\uC597\uAC8C \uAEF4 \uC788\uC5B4\uC694. \uB291\uB300 \uBC1C\uC790\uAD6D\uBCF4\uB2E4 \uD6E8\uC52C \uCEE4\uC694."
+  - "\uCD08\uC18C \uAC1C\uAC00 \uBB3C\uB838\uB294\uB370 \uC0C1\uCC98\uAC00 \uC5BC\uC5B4 \uC788\uC5C8\uC5B4\uC694."
+  - "\uD558\uC6B8\uB9C1\uC774 \uB208\uBCF4\uB77C \uC18C\uB9AC\uC5D0 \uC11E\uC5EC\uC11C \uC5B4\uB514\uC11C \uB098\uB294\uC9C0 \uBAA8\uB974\uACA0\uC5B4\uC694."
+  questTitles:
+  - "\uB208\uBCF4\uB77C \uC18D \uD558\uC580 \uBB34\uB9AC"
+  - "\uC11C\uB9AC \uB080 \uBC1C\uC790\uAD6D"
+  - "\uC5BC\uC5B4\uBD99\uC740 \uBB3C\uB9B0 \uC0C1\uCC98"
+  countTrace: "\uC11C\uB9AC \uB080 \uD070 \uBC1C\uC790\uAD6D\uC774 {n}\uC30D \uCC0D\uD600 \uC788\uC5C8\uB2E4"
+  rankByBand: 010000000200000002000000i
+  role: 2
+  isMonster: 1
+  lookAlike: {fileID: 11400000, guid: f863aa1a1ba52d945b3cff42dcf394f8, type: 2}

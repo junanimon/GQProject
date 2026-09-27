@@ -19,4 +19,14 @@ MonoBehaviour:
   unlockRank: 5
   newcomers: 4
   unlockNote: "\uC124\uC0B0 \uCD08\uC18C '\uD504\uB85C\uC2A4\uD2B8\uAC8C\uC774\uD2B8'\uAC00 \uAE38\uB4DC \uAD00\uD560\uC5D0 \uB4E4\uC5B4\uC654\uB2E4."
-  monsters: []
+  monsters:
+  - {fileID: 11400000, guid: cb9a8fcb06ea6b241b9be6ce7ab40364, type: 2}
+  - {fileID: 11400000, guid: 8f477c3cd254e754d978312ae65cf4c8, type: 2}
+  - {fileID: 11400000, guid: 79d8eb357545c0945acd80bdd49a9f2a, type: 2}
+  - {fileID: 11400000, guid: 709582de06d52c74db0027897155516f, type: 2}
+  - {fileID: 11400000, guid: e5a9de5cb6ed32542aa547a31db9a3eb, type: 2}
+  - {fileID: 11400000, guid: b9ac34db816fa694b95e5cdb1ecc992b, type: 2}
+  - {fileID: 11400000, guid: 08a0e8b61ff22b14a9f29835675dc95a, type: 2}
+  - {fileID: 11400000, guid: 93c7ae7d3942ec140ab9084f3635d367, type: 2}
+  - {fileID: 11400000, guid: 886185acd0b461f4da16a8f9f7027f69, type: 2}
+  - {fileID: 11400000, guid: 0ca94222704ff274b80204e8b310c251, type: 2}

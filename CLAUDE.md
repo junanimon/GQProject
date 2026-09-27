@@ -6,6 +6,7 @@
 - `Assets/Docs/guild_receptionist_design.md` — 원본 기획서 (확정/제안/미정 표기)
 - `Assets/Docs/기획_추가안_Claude.md` — Claude가 채운 추가 기획 (세계관·호감도·몬스터·습격·5주 로드맵·밸런스)
 - `Assets/Docs/Characters/` — 네임드 6명 캐릭터 기획서 + `00_관계도_인덱스.md`
+- `Assets/Docs/지역_몬스터_도감.md` — 지역 5곳 · 길드 등급 · 몬스터 50종 (구별 단서 · 헷갈리는 짝)
 - `Assets/Docs/작업내역.md` — 지금까지의 작업 기록 (단계별 · 시스템별 · 문제 해결 · 테스트 결과 · 사용자 결정). 작업이 끝나면 갱신
 - 새 기획을 추가하면 해당 문서에 [Claude 제안] / [구현됨] / [문서만] 표기로 반영한다
 
@@ -21,16 +22,17 @@
 - `Domain/` — 규칙을 가진 객체: Adventurer, GuildCard, Quest(+QuestEntry), Assignment, Evidence, Guild, Ledger, Regulations, Forgeries(IForgery)
 - `Day/` — 낮 창구: Visit(추상) → ApplicationVisit / ReturnVisit / ChatVisit / UrgentVisit, Counter(하루 영업), Nomination(지명·흥정), DayRecord
 - `Night/` — NightShift
-- `Services/` — AdventurerRoster, VisitorFactory, QuestResolver, RaidResolver, ReportWriter, Lines(대사), PromotionBoard(승급), FacilityShop(상점), RandomEvents, Expedition, QuestGenerator, Calendar
+- `Services/` — AdventurerRoster, VisitorFactory, QuestResolver, RaidResolver, ReportWriter, Lines(대사), PromotionBoard(승급), FacilityShop(상점), RandomEvents, Expedition, QuestGenerator, Calendar, RegionMap(관할 지역 · 길드 등급)
 - `Core/` — GuildGame(조립 + 화면 흐름만), GameConfig(밸런스, 인스펙터 편집), SaveData/SaveSystem(주 시작 자동 저장 · 엔딩 도감), RunStats(누적 기록), AudioHub
 - `Views/` — 화면 표시·연출만 (게임 규칙 없음)
-- `Data/` — ScriptableObject 정의
+- `Data/` — ScriptableObject 정의 (RegionData = 지역: 마크 · 해금 등급 · 몬스터 목록)
 
 ## 작업 규칙 (사용자 요청 사항)
 - **UI·오브젝트는 코드로 런타임 생성하지 않는다.** 모두 씬/프리팹에 실제 오브젝트로 두어 하이어라키에서 수정 가능하게. 반복 항목(게시판 쪽지, 도감 목차 등)만 프리팹을 Instantiate
 - 씬을 대량으로 구성해야 할 때는 `Assets/Editor/Temp*.cs` 임시 에디터 스크립트를 한 번 실행하고 **바로 삭제**한다
 - 데이터(몬스터·의뢰·캐릭터·주차)는 `Assets/Data`의 ScriptableObject 에셋. 이미지는 에셋의 Sprite 필드로 교체 가능하게
   - `Data/Weeks/Week1~5` 주차(임시 규칙·해금·고정 의뢰·스토리·습격), `Data/QuestGenerator` 자동 생성 의뢰 재료, `Data/GameDatabase` 전체 묶음
+  - `Data/Regions/` 지역 5곳, `Data/Monsters/` 몬스터 50종 (+ 해당 없음). 새 몬스터는 지역 에셋의 monsters와 GameDatabase.monsters 둘 다에 넣을 것
 - **MonoBehaviour · ScriptableObject는 반드시 클래스 이름과 같은 파일에 하나씩** (여러 개를 한 파일에 두면 컴포넌트/에셋 연결이 끊긴다)
 - 객체 지향: 상태는 private set + 메서드로 변경, 종류별 동작은 다형성(인터페이스/상속)으로
 - 사용자와는 한국어로 대화. 게임 내 텍스트도 한국어
