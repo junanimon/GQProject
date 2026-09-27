@@ -6,6 +6,7 @@
 - `Assets/Docs/guild_receptionist_design.md` — 원본 기획서 (확정/제안/미정 표기)
 - `Assets/Docs/기획_추가안_Claude.md` — Claude가 채운 추가 기획 (세계관·호감도·몬스터·습격·5주 로드맵·밸런스)
 - `Assets/Docs/Characters/` — 네임드 6명 캐릭터 기획서 + `00_관계도_인덱스.md`
+- `Assets/Docs/Art/fantasy-cel-shading-style-prompt.txt` — 캐릭터 일러스트 그림체 프롬프트 (셀 채색 기준 · 루루 팔레트 · Negative). 실제 그림 발주 · 생성 때 사용
 - `Assets/Docs/지역_몬스터_도감.md` — 지역 5곳 · 길드 등급 · 몬스터 50종 (구별 단서 · 헷갈리는 짝)
 - `Assets/Docs/작업내역.md` — 지금까지의 작업 기록 (단계별 · 시스템별 · 문제 해결 · 테스트 결과 · 사용자 결정). 작업이 끝나면 갱신
 - 새 기획을 추가하면 해당 문서에 [Claude 제안] / [구현됨] / [문서만] 표기로 반영한다

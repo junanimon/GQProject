@@ -1,0 +1,60 @@
+판타지 캐릭터 일러스트 — 그림체 프롬프트 (색감·채도 상세 수정본)
+
+1. 사용법
+캐릭터 설정과 포즈 설명 뒤에 [공통 Positive]를 붙입니다. 루루를 그릴 때만 [루루 전용 팔레트·외형]을 추가합니다. 다른 캐릭터에게 분홍 머리와 보라색 옷을 강제하지 않습니다.
+현재 참고 이미지의 캐릭터 색감과 선을 기준으로 정리했습니다. 배경의 어두운 광원·안개 효과는 그림체에 포함하지 않습니다. 아래 HEX와 HSV는 이미지 픽셀을 실측한 값이 아닌 재현용 권장 목표값입니다. 기존 캐릭터 설정의 대표색은 유지하되, 베이스와 그림자 색을 구분했습니다.
+
+2. 그림체·색감 상세 기준
+- 전체: 손으로 그린 2D 판타지 게임 캐릭터, TV 애니메이션 계열의 또렷한 셀 채색. 실루엣과 표정이 먼저 읽히는 완성형 스탠딩 일러스트.
+- 색감: 차분한 보라색 의상, 밝고 따뜻한 분홍 머리, 선명한 노란 장식의 대비. 모든 부위를 같은 고채도로 칠하지 않고 넓은 면은 중간 채도, 작은 장식은 높은 채도로 구분.
+- 채도: 루루 기준 HSV S 권장 범위는 보라 의상 45~65%, 분홍 머리 35~55%, 노란 장식 65~85%, 피부 15~30%, 갈색 가죽 40~60%. 면적과 주변색에 따라 조정하며, 엄격한 픽셀 제한이 아님.
+- 명도: HSV V 기준 피부 95~100%, 머리 90~100%, 노란 장식 90~100%, 의상 기본색 50~65%, 의상 그림자 25~45%를 목표로 함. 얼굴과 머리는 밝고, 로브는 중간 밝기, 내부 그림자는 어둡게 정리.
+- 명암 대비: 몸 전체를 검게 덮지 않고 모자 밑, 겹친 로브, 소매 안쪽 등 가려지는 부위에만 진한 그림자. 얼굴과 손은 밝게 유지.
+- 광원: 왼쪽 위에서 오는 중립적인 부드러운 주광을 단순화. 그림자 경계는 부드럽게 번지지 않는 셀 형태. 주변광에 의한 큰 색 변화, 강한 역광, 테두리 발광은 없음.
+- 색 단계: 소재별 베이스 1색 + 그림자 1색을 기본으로 사용. 피부·옷·머리에 연속 그라데이션을 넣지 않음. 깊은 소매 안쪽 같은 별도 내부 면만 추가 어두운 단색 허용.
+- 그림자 색: 기본색에 검정을 섞는 식의 회색 탁색을 피함. 보라는 더 어두운 청보라, 분홍은 장밋빛 분홍, 피부는 따뜻한 살구색, 노랑은 황토색으로 이동. 그림자도 채색된 단색으로 유지.
+- 선: 거의 검은 짙은 보라 또는 짙은 갈색. 1024px 폭 기준 바깥 윤곽 약 3~5px, 내부선 약 1~3px를 시각적 가이드로 사용. 축소·확대 시 비례 조정. 끝이 자연스럽게 가늘어지며, 모든 곳이 같은 굵기의 스티커 테두리가 되지 않게 함.
+- 머리: 잔머리 한 올씩 묘사하지 않고 큼직한 머리카락 묶음과 뾰족한 끝으로 형태 표현. 평평한 분홍 면과 선명한 그림자 면. 광택 띠·백색 반사광 없음.
+- 피부: 밝은 복숭아색의 균일한 면. 볼 홍조는 짧은 선 몇 개. 작은 주근깨는 가능하지만 코를 검게 만드는 점이나 그을음은 없음. 코는 작은 선 또는 최소한의 피부색 명암으로 표현.
+- 눈: 선명한 윗속눈썹, 둥근 짙은 동공. 홍채는 기본색과 밝은색을 경계가 명확한 단색 면으로 구분. 각 눈에 흰 하이라이트 1개씩, 크기·위치 일관. 유리구슬 같은 광택이나 별빛 효과 없음.
+- 옷: 주름마다 선을 가득 넣지 않고 큰 접힘과 넓은 그림자 면으로 표현. 낡음은 덧댄 천, 바느질, 해진 끝으로 전달. 노이즈·얼룩·사실적인 섬유 질감으로 표현하지 않음.
+- 소재: 천과 가죽은 무광. 나무는 따뜻한 황갈색과 단순한 윤곽, 최소한의 결 선. 금속·노란 장식도 단색 중심으로 정리하고 번쩍이는 사실적 반사를 피함.
+
+3. 루루 전용 팔레트·외형
+베이스 / 그림자 권장색:
+- 분홍 머리: #FF8CB8 / #D96391
+- 보라 홍채: #9959D9 / #593780, 밝은 부분 #C9A7EC
+- 보라 모자·로브: #6B479E / #3E285F
+- 노란 띠·끈·바느질: #F2C74D / #B98A2C. 밝은 강조가 필요하면 #FFE35B를 작은 면에만 사용.
+- 피부: #FFE1C3 / #EDB18C
+- 갈색 부츠·주머니: #A9784E / #704C32
+- 나무 지팡이: #BC8854 / #805633
+- 소매 안감: #C7BADB / #9687AC
+- 기본 선색: #211725. 눈동자·가장 깊은 틈 외에는 넓은 순검정 면을 피함.
+
+작고 마른 체형, 통통한 볼, 분홍 트윈테일, 보라 눈, 몸보다 큰 마녀 모자와 로브, 두 번 접은 소매, 허리 주머니 3개, 작은 호루라기, 나무별 지팡이, 서로 다른 부츠 끈을 유지.
+코와 얼굴에는 그을음·검댕·얼룩을 넣지 않음. 주근깨와 볼 홍조는 그을음과 구별하여 작게 표현. 지팡이 끝의 탄 표현 등 소품 설정은 별도로 유지.
+
+4. 공통 Positive — 복사용
+Hand-drawn 2D fantasy game character illustration, classic TV anime character art, expressive stylized features, clear readable silhouette. Clean confident near-black plum or dark brown lineart, medium-weight outer contours, thinner interior detail lines, naturally tapered strokes, no uniform sticker border.
+Strict flat cel shading: one uniform base color and one uniform shadow color per material, broad deliberate hard-edged shadow shapes, clean consistent solid fills. Additional deep solid tone only for separate occluded interior surfaces. No continuous tonal transitions. Neutral upper-left key light, bright readable face and hands, controlled dark shadows under overlapping clothing.
+Balanced selective saturation: moderately saturated large clothing areas, brighter light hair when specified, saturated small accent details, light warm low-saturation skin, subdued warm leather and wood. Preserve the character-specific hue palette. Use colored shadows related to each base hue, never a muddy gray overlay. Matte surfaces, clear value separation, vivid but not neon, neither washed-out pastel nor uniformly oversaturated.
+Hair drawn in distinct grouped locks with solid base and hard-edged shadow shapes, no glossy shine bands. Even peach skin, minimal anime nose indication, clean natural skin-colored nose, blush shown only by a few short hatch marks. No facial soot or dark nose smudge.
+Expressive anime eyes with crisp upper lash lines, round dark pupils, iris colors separated into solid shapes with hard boundaries. Exactly one small white highlight per eye with consistent size and position, no gradient iris or wet reflections.
+Clothing folds expressed with economical lines and broad flat shadow shapes. Wear shown through clearly drawn patches, stitches and frayed edges, not gritty texture. Simplified matte wood, leather and metal. Polished full-body character art suitable for a fantasy game or visual novel.
+
+5. ルル / Lulu palette add-on — 루루에게만 추가
+Lulu: soft bright rose-pink twin tails, medium-value violet robe and oversized witch hat, deeper blue-violet cel shadows, vivid warm golden-yellow ribbon, rope and stitches, pale warm peach skin, violet eyes, muted caramel-brown leather boots and three pouches, warm tan wooden star staff. Violet dominates the clothing area; pink frames the face; yellow stays in small high-saturation accents. Keep the face clean with a natural skin-colored nose, no soot marks. Preserve small freckles and short blush hatching without making the nose dark. Small slender build with rounded cheeks, oversized clothes, twice-folded sleeves, whistle necklace, mismatched boot laces.
+
+6. Negative — 제외 조건
+soft shading, gradients, gradient iris, airbrush, blended colors, feathered shadow edges, smooth tonal transitions, muddy gray shadows, neon colors, fluorescent palette, uniformly oversaturated colors, washed-out colors, heavy color grading, strong ambient color cast, bloom, rim glow, watercolor, painterly rendering, brush texture, paper texture, grain, noise, mottled colors, patchy fills, realistic fabric texture, detailed wood grain, glossy leather, glossy skin, wet eyes, glowing iris, sparkling eyes, multiple eye highlights, detailed iris fibers, blurry lineart, smudged eyelashes, excessively thick outlines, uniform sticker border, facial soot, nose smudge, black nose, nostril dots, realistic nose rendering, airbrushed blush, photorealism, 3D rendering.
+
+7. 전신·투명 배경 추가 문구
+Single character, full-body standing illustration, entire hat, hair, staff, accessories and feet visible, comfortable transparent margin around the silhouette. Genuine transparent background with clean smooth edges, no scenery, no gradient backdrop, no ground shadow, no glow, no text, no logo.
+
+8. 기존 그림 수정 시
+Change only the explicitly requested elements. Preserve the original character identity, facial expression, proportions, pose, costume, accessories, framing, palette and linework. Remove the soot mark from the nose and restore clean natural skin color. If background removal is requested, remove only the background and preserve every foreground element with clean smooth edges.
+※ 그림체 전체 변경을 요청할 때만 별도로 셀 채색 재적용을 지시합니다. 작은 수정에서 전체 명암을 다시 칠하도록 지시하지 않습니다.
+
+9. 결과 확인
+모자·지팡이·발끝이 잘리지 않았는지, 주머니가 3개인지, 코가 검지 않은지 확인합니다. 얼굴 피부와 로브 면에 그라데이션·얼룩이 생기지 않았는지, 눈마다 하이라이트가 1개인지 확인합니다. 투명 배경은 체크무늬가 그려진 배경이 아닌 실제 알파 채널이어야 합니다. HEX·HSV는 생성 결과를 보장하는 강제값이 아니므로 최종 색은 시각적으로 확인합니다.
